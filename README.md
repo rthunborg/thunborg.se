@@ -2,7 +2,7 @@
 
 Personal website and CV profile for **Rasmus Thunborg**.
 
-The site uses a dark, restrained visual language with amber accents, compact cards, and direct Swedish copy. The content is personal-first: CV, selected work, work style, Agentic AI, and contact.
+The site uses a dark, restrained visual language with amber accents, compact cards, and direct English copy. The content is personal-first: CV, selected work, work style, Agentic AI, and contact.
 
 ## Tech Stack
 

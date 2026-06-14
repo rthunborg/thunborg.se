@@ -3,12 +3,12 @@ import nodemailer from "nodemailer";
 import { site } from "@/lib/site-config";
 
 interface ContactBody {
-  namn: string;
-  organisation?: string;
-  epost: string;
-  telefon?: string;
-  amne?: string;
-  meddelande: string;
+  name: string;
+  organization?: string;
+  email: string;
+  phone?: string;
+  subject?: string;
+  message: string;
   honeypot?: string;
   turnstileToken?: string;
   _t?: string;
@@ -17,12 +17,12 @@ interface ContactBody {
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_REQUEST_BYTES = 32 * 1024;
 const CONTACT_FIELDS = [
-  "namn",
-  "organisation",
-  "epost",
-  "telefon",
-  "amne",
-  "meddelande",
+  "name",
+  "organization",
+  "email",
+  "phone",
+  "subject",
+  "message",
   "honeypot",
   "turnstileToken",
   "_t",
@@ -31,12 +31,12 @@ const CONTACT_FIELDS = [
 type ContactField = (typeof CONTACT_FIELDS)[number];
 
 const FIELD_LIMITS: Record<ContactField, number> = {
-  namn: 120,
-  organisation: 160,
-  epost: 254,
-  telefon: 40,
-  amne: 140,
-  meddelande: 5000,
+  name: 120,
+  organization: 160,
+  email: 254,
+  phone: 40,
+  subject: 140,
+  message: 5000,
   honeypot: 500,
   turnstileToken: 4096,
   _t: 128,
@@ -73,7 +73,7 @@ async function parseContactBody(request: Request): Promise<ValidationResult> {
   if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
     return {
       ok: false,
-      error: "Meddelandet är för stort.",
+      error: "The message is too large.",
       status: 413,
     };
   }
@@ -82,13 +82,13 @@ async function parseContactBody(request: Request): Promise<ValidationResult> {
   try {
     rawBody = await request.text();
   } catch {
-    return { ok: false, error: "Kunde inte läsa formuläret.", status: 400 };
+    return { ok: false, error: "Could not read the form.", status: 400 };
   }
 
   if (new TextEncoder().encode(rawBody).length > MAX_REQUEST_BYTES) {
     return {
       ok: false,
-      error: "Meddelandet är för stort.",
+      error: "The message is too large.",
       status: 413,
     };
   }
@@ -97,11 +97,11 @@ async function parseContactBody(request: Request): Promise<ValidationResult> {
   try {
     parsed = JSON.parse(rawBody);
   } catch {
-    return { ok: false, error: "Ogiltigt formulärdata.", status: 400 };
+    return { ok: false, error: "Invalid form data.", status: 400 };
   }
 
   if (!isRecord(parsed)) {
-    return { ok: false, error: "Ogiltigt formulärdata.", status: 400 };
+    return { ok: false, error: "Invalid form data.", status: 400 };
   }
 
   const values: Partial<Record<ContactField, string>> = {};
@@ -109,13 +109,13 @@ async function parseContactBody(request: Request): Promise<ValidationResult> {
     const value = parsed[field];
     if (value === undefined || value === null || value === "") continue;
     if (typeof value !== "string") {
-      return { ok: false, error: "Ogiltigt formulärdata.", status: 400 };
+      return { ok: false, error: "Invalid form data.", status: 400 };
     }
 
     if (value.length > FIELD_LIMITS[field]) {
       return {
         ok: false,
-        error: "Meddelandet är för stort.",
+        error: "The message is too large.",
         status: 413,
       };
     }
@@ -123,27 +123,27 @@ async function parseContactBody(request: Request): Promise<ValidationResult> {
     values[field] = value.trim();
   }
 
-  if (!values.namn || !values.epost || !values.meddelande) {
+  if (!values.name || !values.email || !values.message) {
     return {
       ok: false,
-      error: "Alla obligatoriska fält måste fyllas i.",
+      error: "All required fields must be filled in.",
       status: 400,
     };
   }
 
-  if (!EMAIL_REGEX.test(values.epost)) {
-    return { ok: false, error: "Ogiltig e-postadress.", status: 400 };
+  if (!EMAIL_REGEX.test(values.email)) {
+    return { ok: false, error: "Invalid email address.", status: 400 };
   }
 
   return {
     ok: true,
     body: {
-      namn: values.namn,
-      organisation: values.organisation,
-      epost: values.epost,
-      telefon: values.telefon,
-      amne: values.amne,
-      meddelande: values.meddelande,
+      name: values.name,
+      organization: values.organization,
+      email: values.email,
+      phone: values.phone,
+      subject: values.subject,
+      message: values.message,
       honeypot: values.honeypot,
       turnstileToken: values.turnstileToken,
       _t: values._t,
@@ -189,14 +189,14 @@ export async function POST(request: Request) {
     if (turnstileSecret) {
       if (!body.turnstileToken) {
         return NextResponse.json(
-          { error: "Verifieringen saknas. Uppdatera sidan och försök igen." },
+          { error: "Verification is missing. Refresh the page and try again." },
           { status: 400 },
         );
       }
       const valid = await verifyTurnstile(body.turnstileToken, turnstileSecret);
       if (!valid) {
         return NextResponse.json(
-          { error: "Verifieringen misslyckades. Försök igen." },
+          { error: "Verification failed. Try again." },
           { status: 400 },
         );
       }
@@ -215,22 +215,22 @@ export async function POST(request: Request) {
     });
 
     const htmlBody = `
-      <h2>Nytt meddelande via ${site.domain}</h2>
+      <h2>New message via ${site.domain}</h2>
       <table style="border-collapse:collapse;width:100%;max-width:600px;">
-        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Namn</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.namn)}</td></tr>
-        ${body.organisation ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Organisation</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.organisation)}</td></tr>` : ""}
-        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">E-post</td><td style="padding:8px 12px;border-bottom:1px solid #eee;"><a href="mailto:${escapeHtml(body.epost)}">${escapeHtml(body.epost)}</a></td></tr>
-        ${body.telefon ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Telefon</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.telefon)}</td></tr>` : ""}
-        ${body.amne ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Ämne</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.amne)}</td></tr>` : ""}
-        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Meddelande</td><td style="padding:8px 12px;border-bottom:1px solid #eee;white-space:pre-wrap;">${escapeHtml(body.meddelande)}</td></tr>
+        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.name)}</td></tr>
+        ${body.organization ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Organization</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.organization)}</td></tr>` : ""}
+        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #eee;"><a href="mailto:${escapeHtml(body.email)}">${escapeHtml(body.email)}</a></td></tr>
+        ${body.phone ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Phone</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.phone)}</td></tr>` : ""}
+        ${body.subject ? `<tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Subject</td><td style="padding:8px 12px;border-bottom:1px solid #eee;">${escapeHtml(body.subject)}</td></tr>` : ""}
+        <tr><td style="padding:8px 12px;font-weight:bold;border-bottom:1px solid #eee;">Message</td><td style="padding:8px 12px;border-bottom:1px solid #eee;white-space:pre-wrap;">${escapeHtml(body.message)}</td></tr>
       </table>
     `;
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || `noreply@${site.domain}`,
       to,
-      replyTo: body.epost,
-      subject: `Meddelande via ${site.domain}: ${body.namn}`,
+      replyTo: body.email,
+      subject: `Message via ${site.domain}: ${body.name}`,
       html: htmlBody,
     });
 
@@ -238,7 +238,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(
-      { error: "Ett internt fel uppstod." },
+      { error: "An internal error occurred." },
       { status: 500 }
     );
   }

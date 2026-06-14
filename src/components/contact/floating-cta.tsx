@@ -67,7 +67,7 @@ function FloatingCtaVisible({ onContact }: FloatingCtaVisibleProps) {
       ref={buttonRef}
       type="button"
       onClick={() => onContact()}
-      aria-label="Kontakt"
+      aria-label="Contact"
       className={`fixed bottom-6 left-1/2 z-40 rounded-full px-6 py-3 text-sm font-semibold shadow-lg min-h-12 min-w-12 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] motion-reduce:transition-none ${
         inverted ? "shadow-black/20" : "shadow-amber-500/20"
       }`}
@@ -82,7 +82,7 @@ function FloatingCtaVisible({ onContact }: FloatingCtaVisibleProps) {
       exit={{ opacity: 0, y: 20, x: "-50%" }}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
-      Bolla en idé?
+      Discuss an idea?
     </motion.button>
   );
 }

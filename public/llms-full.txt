@@ -110,7 +110,7 @@ Read more: [3D modeling backend architecture](https://thunborg.se/case-study/glo
 - The Product Management for AI and Data Science
 - The Complete Artificial Intelligence and ChatGPT Course
 - How to Tell a Story with Data
-- Ledarskap 1
+- Leadership 1
 
 ## Languages
 

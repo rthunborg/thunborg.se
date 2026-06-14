@@ -19,7 +19,7 @@ export function PageShell({ breadcrumbSegments, children }: PageShellProps) {
       <BreadcrumbJsonLd segments={breadcrumbSegments} />
       <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-16 pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
         <nav
-          aria-label="Brödsmulor"
+          aria-label="Breadcrumbs"
           className="border-b border-[rgba(255,255,255,0.08)] pb-4 mb-6"
         >
           <p className="font-mono text-[13px]">

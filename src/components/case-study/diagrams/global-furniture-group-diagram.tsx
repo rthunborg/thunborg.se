@@ -51,7 +51,7 @@ export function GlobalFurnitureGroupDiagram() {
     <div className="w-full">
       <svg
         role="img"
-        aria-label="Arkitekturdiagram: Backend-arkitektur med .NET API, Active Directory-integration, MongoDB och legacy Python-migration"
+        aria-label="Architecture diagram: Backend architecture with .NET API, Active Directory integration, MongoDB, and legacy Python migration"
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@ export function GlobalFurnitureGroupDiagram() {
           fill="#919191"
           fontSize="8"
         >
-          3D-modellering (intern app)
+          3D modeling (internal app)
         </text>
 
         {/* === Auth — Active Directory === */}
@@ -345,7 +345,7 @@ export function GlobalFurnitureGroupDiagram() {
           fill="#919191"
           fontSize="8"
         >
-          3D-modelldata
+          3D model data
         </text>
 
         {/* === Legacy — Python Backend (faded, dashed) === */}
@@ -381,7 +381,7 @@ export function GlobalFurnitureGroupDiagram() {
           fontSize="8"
           opacity={0.4}
         >
-          LEGACY (migreras)
+          LEGACY (migrating)
         </text>
 
         {/* Migration arrow: Legacy → API (.NET) */}

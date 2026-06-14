@@ -4,36 +4,36 @@ import { NordicFashionChainDiagram } from "@/components/case-study/diagrams/nord
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Från legacy till eventdriven arkitektur | Rasmus Thunborg",
+  title: "From legacy to event-driven architecture | Rasmus Thunborg",
   description:
-    "Utvalt projekt: modernisering av legacy-system för order, lager och WMS med .NET microservices, event sourcing och Azure/Kubernetes.",
+    "Selected project: modernization of legacy systems for order, inventory, and WMS with .NET microservices, event sourcing, and Azure/Kubernetes.",
   path: "/case-study/nordic-fashion-chain",
 });
 
 const metrics: CaseStudyMetric[] = [
   {
-    label: "Deploy-frekvens",
-    before: "1/mån",
-    after: "3/vecka",
+    label: "Deploy frequency",
+    before: "1/month",
+    after: "3/week",
     delta: "↑ 1100%",
     improvement: "positive",
   },
   {
-    label: "Incidenter",
-    before: "8/mån",
-    after: "1/mån",
+    label: "Incidents",
+    before: "8/month",
+    after: "1/month",
     delta: "↓ 88%",
     improvement: "positive",
   },
   {
     label: "Lead time",
-    before: "3 veckor",
-    after: "4 dagar",
+    before: "3 weeks",
+    after: "4 days",
     delta: "↓ 81%",
     improvement: "positive",
   },
   {
-    label: "Tillgänglighet",
+    label: "Availability",
     before: "97%",
     after: "99.8%",
     delta: "↑ 2.8pp",
@@ -45,27 +45,26 @@ export default function NordicFashionChainCaseStudyPage() {
   return (
       <CaseStudyLayout
         slug="nordic-fashion-chain"
-        title="Från Legacy till Eventdriven Arkitektur"
-        industry="Fashion / E-handel"
-        timeline="2.5 år (on demand, 8–24h/vecka)"
+        title="From Legacy to Event-Driven Architecture"
+        industry="Fashion / E-commerce"
+        timeline="2.5 years (on demand, 8–24h/week)"
         problemNarrative={
           <>
             <p className="mb-4">
-              Kundens orderhantering, lagerflöden och WMS-system var tätt
-              kopplade till Oracle-databaser och PostNord-integrationer.
-              Varje förändring innebar kaskadrisker: en uppdatering i ett
-              system kunde slå ut flöden i tre andra.
+              The client&apos;s order handling, inventory flows, and WMS systems
+              were tightly coupled to Oracle databases and PostNord
+              integrations. Every change carried cascading risk: an update in
+              one system could break flows in three others.
             </p>
             <p className="mb-4">
-              Integrationer hanterades manuellt och deploy-cykeln var
-              begränsad till en gång per månad. Incidentfrekvensen var hög
-              och teamet spenderade mer tid på brandkårsutryckningar än på
-              nya leveranser.
+              Integrations were handled manually and the deployment cycle was
+              limited to once per month. Incident frequency was high, and the
+              team spent more time on firefighting than on new delivery.
             </p>
             <p>
-              Situationen bromsade både e-handeln och butiksverksamheten.
-              Kunden behövde en modernisering som kunde genomföras stegvis,
-              utan att stänga ner pågående verksamhet.
+              The situation slowed both e-commerce and store operations. The
+              client needed modernization that could be carried out
+              incrementally without shutting down ongoing business.
             </p>
           </>
         }
@@ -74,35 +73,34 @@ export default function NordicFashionChainCaseStudyPage() {
           <ul className="list-disc pl-5 space-y-3">
             <li>
               <strong className="text-[#EDEDED]">
-                .NET microservices med DDD och event sourcing:
+                .NET microservices with DDD and event sourcing:
               </strong>{" "}
-              Bröt upp legacy-monoliten i domänspecifika tjänster med tydliga
-              aggregates och eventdrivna flöden. Varje tjänst kunde deployas
-              och skalas oberoende.
+              Broke up the legacy monolith into domain-specific services with
+              clear aggregates and event-driven flows. Each service could be
+              deployed and scaled independently.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                Azure/Kubernetes med Terraform IaC:
+                Azure/Kubernetes with Terraform IaC:
               </strong>{" "}
-              All infrastruktur definierad som kod. Reproducerbara miljöer,
-              automatiserade deployments och konsekvent konfiguration mellan
-              staging och produktion.
+              All infrastructure defined as code. Reproducible environments,
+              automated deployments, and consistent configuration between
+              staging and production.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                Cosmos DB, Service Bus, Event Grid och Kafka:
+                Cosmos DB, Service Bus, Event Grid, and Kafka:
               </strong>{" "}
-              Rätt verktyg för varje integration. Service Bus för kommandon,
-              Event Grid för notifieringar, Kafka för högkapacitetsströmmar
-              och Cosmos DB för domändata.
+              The right tool for each integration. Service Bus for commands,
+              Event Grid for notifications, Kafka for high-capacity streams,
+              and Cosmos DB for domain data.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
                 Grafana observability:
               </strong>{" "}
-              End-to-end monitoring över alla tjänster. Teamet kunde
-              identifiera och åtgärda problem innan de påverkade
-              slutanvändare.
+              End-to-end monitoring across all services. The team could
+              identify and fix problems before they affected end users.
             </li>
           </ul>
         }
@@ -110,15 +108,15 @@ export default function NordicFashionChainCaseStudyPage() {
         outcomeNarrative={
           <>
             <p className="mb-4">
-              Deploy-frekvensen ökade från en gång per månad till tre gånger
-              per vecka. Incidenter minskade med 88% och lead time gick från
-              tre veckor till fyra dagar.
+              Deploy frequency increased from once per month to three times
+              per week. Incidents decreased by 88%, and lead time went from
+              three weeks to four days.
             </p>
             <p>
-              Den nya eventdrivna arkitekturen eliminerade kaskadrisker och
-              gav kunden möjlighet att reagera snabbare på säsongstoppar och
-              marknadsförändringar. Teamet kunde fokusera på nya leveranser
-              istället för att hantera systemfel.
+              The new event-driven architecture eliminated cascading risks and
+              helped the client respond faster to seasonal peaks and market
+              changes. The team could focus on new delivery instead of handling
+              system failures.
             </p>
           </>
         }

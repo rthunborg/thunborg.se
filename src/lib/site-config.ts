@@ -4,19 +4,19 @@ export const site = {
   domain: "thunborg.se",
   url: "https://thunborg.se",
   email: "rasmus@thunborg.se",
-  location: "Göteborg, Sverige",
+  location: "Gothenburg, Sweden",
   linkedin: "https://www.linkedin.com/in/rasmusthunborg/",
   cvPath: "/cv/rasmus-thunborg-cv.pdf",
   description:
-    "Expert Software Engineer i Göteborg med 10+ års erfarenhet av backend, molnarkitektur, teknisk ledning och Agentic AI.",
+    "Expert Software Engineer in Gothenburg with 10+ years of experience in backend systems, cloud architecture, technical leadership, and Agentic AI.",
 } as const;
 
 export const mainNavigation = [
-  { label: "Om mig", href: "/about" },
-  { label: "Erfarenhet", href: "/case-studies" },
-  { label: "Så arbetar jag", href: "/methodology" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/case-studies" },
+  { label: "How I work", href: "/methodology" },
   { label: "Agentic AI", href: "/agentic-ai" },
-  { label: "Bidrag", href: "/services" },
+  { label: "Services", href: "/services" },
 ] as const;
 
 export const publicRoutes = [

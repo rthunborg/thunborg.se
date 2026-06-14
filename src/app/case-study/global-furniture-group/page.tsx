@@ -5,39 +5,39 @@ import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title:
-    "Backend-arkitektur för 3D-modellering | Rasmus Thunborg",
+    "Backend architecture for 3D modeling | Rasmus Thunborg",
   description:
-    "Utvalt projekt: komplett .NET backend-arkitektur för intern 3D-modellering, IAM, CI/CD och legacy-migration.",
+    "Selected project: complete .NET backend architecture for internal 3D modeling, IAM, CI/CD, and legacy migration.",
   path: "/case-study/global-furniture-group",
 });
 
 const metrics: CaseStudyMetric[] = [
   {
-    label: "Design till MVP",
+    label: "Design to MVP",
     before: "",
-    after: "8 veckor",
-    delta: "Levererat",
+    after: "8 weeks",
+    delta: "Delivered",
     improvement: "positive",
   },
   {
     label: "API-endpoints",
     before: "0",
-    after: "24 st",
+    after: "24",
     delta: "Ny backend",
     improvement: "positive",
   },
   {
     label: "AD-compliance",
-    before: "Saknad",
+    before: "Missing",
     after: "100%",
     delta: "Full compliance",
     improvement: "positive",
   },
   {
-    label: "Legacy-kartläggning",
-    before: "Nada",
-    after: "Fullständig",
-    delta: "Komplett plan",
+    label: "Legacy mapping",
+    before: "None",
+    after: "Complete",
+    delta: "Complete plan",
     improvement: "positive",
   },
 ];
@@ -46,28 +46,27 @@ export default function GlobalFurnitureGroupCaseStudyPage() {
   return (
       <CaseStudyLayout
         slug="global-furniture-group"
-        title="Backend-Arkitektur för 3D-Modellering"
-        industry="Detaljhandel / Enterprise"
-        timeline="6 månader (2021)"
+        title="Backend Architecture for 3D Modeling"
+        industry="Retail / Enterprise"
+        timeline="6 months (2021)"
         problemNarrative={
           <>
             <p className="mb-4">
-              Kunden utvecklade en ny intern applikation för
-              3D-modellering. Projektet behövde en komplett .NET
-              backend-arkitektur från grunden: autentisering,
-              auktorisering, API-design och datamodell.
+              The client was developing a new internal application for 3D
+              modeling. The project needed a complete .NET backend architecture
+              from the ground up: authentication, authorization, API design,
+              and data model.
             </p>
             <p className="mb-4">
-              Parallellt fanns en äldre Python-backend som hanterade
-              befintliga integrationer. Systemet var odokumenterat och ingen
-              i teamet hade fullständig kunskap om dess funktionalitet.
-              Migrationen krävde reverse engineering innan den kunde
-              planeras.
+              In parallel, an older Python backend handled existing
+              integrations. The system was undocumented and no one on the team
+              had complete knowledge of its functionality. The migration
+              required reverse engineering before it could be planned.
             </p>
             <p>
-              Kunden behövde en senior mjukvaruarkitekt som kunde designa hela
-              backend-lagret, integrera med Active Directory och samtidigt
-              kartlägga legacy-systemet för en ordnad övergång.
+              The client needed a senior software architect who could design
+              the entire backend layer, integrate with Active Directory, and
+              map the legacy system for an orderly transition.
             </p>
           </>
         }
@@ -76,33 +75,33 @@ export default function GlobalFurnitureGroupCaseStudyPage() {
           <ul className="list-disc pl-5 space-y-3">
             <li>
               <strong className="text-[#EDEDED]">
-                .NET backend-arkitektur från grunden:
+                .NET backend architecture from scratch:
               </strong>{" "}
-              Designade och implementerade hela backend-lösningen med
-              tydlig domänmodell, API-kontrakt och säkerhetsarkitektur.
+              Designed and implemented the full backend solution with a clear
+              domain model, API contracts, and security architecture.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                IAM med Active Directory och Microsoft Graph:
+                IAM with Active Directory and Microsoft Graph:
               </strong>{" "}
-              Identitets- och åtkomsthantering baserad på kundens befintliga
-              Active Directory. Integration med Microsoft Graph och Azure
-              AD för robust autentisering och auktorisering.
+              Identity and access management based on the client&apos;s
+              existing Active Directory. Integrated Microsoft Graph and Azure AD
+              for robust authentication and authorization.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                CI/CD i Azure DevOps:
+                CI/CD in Azure DevOps:
               </strong>{" "}
-              Automatiserade pipelines för bygge, testning och deployment.
-              MongoDB-datamodell optimerad för 3D-modelldata.
+              Automated pipelines for build, testing, and deployment. Optimized
+              the MongoDB data model for 3D model data.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                Reverse engineering av Python-legacy:
+                Reverse engineering of Python legacy:
               </strong>{" "}
-              Kartlade befintliga integrationer och funktionalitet i den
-              odokumenterade Python-backenden. Definierade en komplett
-              migrationsstrategi till den nya plattformen.
+              Mapped existing integrations and functionality in the
+              undocumented Python backend. Defined a complete migration
+              strategy to the new platform.
             </li>
           </ul>
         }
@@ -110,15 +109,14 @@ export default function GlobalFurnitureGroupCaseStudyPage() {
         outcomeNarrative={
           <>
             <p className="mb-4">
-              Inom åtta veckor var MVP:n levererad med 24 API-endpoints,
-              full AD-compliance och en komplett datamodell i MongoDB.
-              Teamet hade en produktionsklar backend att bygga vidare på.
+              Within eight weeks, the MVP was delivered with 24 API endpoints,
+              full AD compliance, and a complete data model in MongoDB. The
+              team had a production-ready backend to build on.
             </p>
             <p>
-              Legacy-kartläggningen gav kunden en tydlig bild av vad som
-              behövde migreras och i vilken ordning. Migrationsplanen
-              minimerade risken för avbrott och gav projektet en trygg väg
-              framåt.
+              The legacy mapping gave the client a clear view of what needed to
+              be migrated and in what order. The migration plan minimized the
+              risk of disruption and gave the project a safe path forward.
             </p>
           </>
         }

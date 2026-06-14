@@ -32,7 +32,7 @@ export function CaseStudyLayout({
       {/* Starting point */}
       <section className="max-w-4xl mx-auto py-12 sm:py-16 border-t border-[rgba(255,255,255,0.08)]">
         <h2 className="font-mono text-xs uppercase tracking-widest text-[#919191] mb-4">
-          Utgångsläge
+          Starting point
         </h2>
         <div className="text-[#EDEDED]/90 text-base sm:text-lg leading-relaxed">
           {problemNarrative}
@@ -47,7 +47,7 @@ export function CaseStudyLayout({
       {/* Contribution */}
       <section className="max-w-4xl mx-auto py-12 sm:py-16 border-t border-[rgba(255,255,255,0.08)]">
         <h2 className="font-mono text-xs uppercase tracking-widest text-[#919191] mb-4">
-          Min insats
+          My contribution
         </h2>
         <div className="text-[#EDEDED]/90 text-base sm:text-lg leading-relaxed">
           {interventionNarrative}
@@ -57,7 +57,7 @@ export function CaseStudyLayout({
       {/* Impact metrics */}
       <section className="max-w-4xl mx-auto py-12 sm:py-16 border-t border-[rgba(255,255,255,0.08)]">
         <h2 className="font-mono text-xs uppercase tracking-widest text-[#919191] mb-6">
-          Mätbar påverkan
+          Measurable impact
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {metrics.map((metric) => (
@@ -69,7 +69,7 @@ export function CaseStudyLayout({
       {/* Outcome */}
       <section className="max-w-4xl mx-auto py-12 sm:py-16 border-t border-[rgba(255,255,255,0.08)]">
         <h2 className="font-mono text-xs uppercase tracking-widest text-[#919191] mb-4">
-          Resultat
+          Outcome
         </h2>
         <div className="text-[#EDEDED]/90 text-base sm:text-lg leading-relaxed">
           {outcomeNarrative}

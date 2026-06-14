@@ -4,15 +4,15 @@ import { GlobalEvManufacturerDiagram } from "@/components/case-study/diagrams/gl
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Teknisk ledning för finansiella integrationer | Rasmus Thunborg",
+  title: "Technical leadership for financial integrations | Rasmus Thunborg",
   description:
-    "Utvalt projekt: teknisk ledning, AWS serverless och finansiella integrationer för en världsledande elbilstillverkare.",
+    "Selected project: technical leadership, AWS serverless, and financial integrations for a global EV manufacturer.",
   path: "/case-study/global-ev-manufacturer",
 });
 
 const metrics: CaseStudyMetric[] = [
   {
-    label: "Leveranstakt",
+    label: "Delivery pace",
     before: "Baseline",
     after: "+45%",
     delta: "↑ 45%",
@@ -27,14 +27,14 @@ const metrics: CaseStudyMetric[] = [
   },
   {
     label: "Onboarding",
-    before: "3 månader",
-    after: "3 veckor",
+    before: "3 months",
+    after: "3 weeks",
     delta: "↓ 77%",
     improvement: "positive",
   },
   {
-    label: "Säkerhetsincidenter",
-    before: "Varierande",
+    label: "Security incidents",
+    before: "Variable",
     after: "0",
     delta: "↓ 100%",
     improvement: "positive",
@@ -45,23 +45,23 @@ export default function GlobalEvManufacturerCaseStudyPage() {
   return (
       <CaseStudyLayout
         slug="global-ev-manufacturer"
-        title="Teknisk Ledning för Finansiella Integrationer"
+        title="Technical Leadership for Financial Integrations"
         industry="Automotive / FinTech"
-        timeline="4 år (2021–2025)"
+        timeline="4 years (2021–2025)"
         problemNarrative={
           <>
             <p className="mb-4">
-              Kundens kundfinansieringsflöde krävde integrationer mot
-              flera externa finansiella leverantörer. Systemet kördes på AWS
-              serverless men saknade senior teknisk ledning.
-              Arkitekturbeslut fattades ad hoc och onboarding av nya
-              utvecklare tog tre månader.
+              The client&apos;s customer financing flow required integrations
+              with several external financial providers. The system ran on AWS
+              serverless but lacked senior technical leadership. Architecture
+              decisions were made ad hoc, and onboarding new developers took
+              three months.
             </p>
             <p className="mb-4">
-              Varje ny leverantörsintegration innebar osäkerhet kring
-              OAuth2-flöden, TLS-konfiguration och datamodellering. Utan en
-              tydlig teknisk riktning växte komplexiteten snabbare än
-              teamets förmåga att hantera den.
+              Each new provider integration introduced uncertainty around
+              OAuth2 flows, TLS configuration, and data modeling. Without clear
+              technical direction, complexity grew faster than the team&apos;s
+              ability to manage it.
             </p>
           </>
         }
@@ -72,32 +72,31 @@ export default function GlobalEvManufacturerCaseStudyPage() {
               <strong className="text-[#EDEDED]">
                 Interim Tech Lead:
               </strong>{" "}
-              Satte teknisk riktning tillsammans med solution architect,
-              koordinerade genomförandet och jobbade tätt med Digital
-              Lead/PO. Drev arkitekturbeslut från dag ett.
+              Set technical direction together with the solution architect,
+              coordinated delivery, and worked closely with the Digital
+              Lead/PO. Drove architecture decisions from day one.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
                 AWS Lambda/DynamoDB serverless:
               </strong>{" "}
-              Ny funktionalitet på serverless-stack med .NET,
-              TypeScript och React. Automatiserade tester och
-              Terraform-baserad infrastruktur.
+              New functionality on a serverless stack with .NET, TypeScript,
+              and React. Automated tests and Terraform-based infrastructure.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                Mentoring och kunskapsöverföring:
+                Mentoring and knowledge transfer:
               </strong>{" "}
-              Strukturerad mentoring av utvecklare.               Dokumenterad
-              vision för mjukvaruarkitekturen och beslutsdagbok som minskade
-              onboarding-tiden från tre månader till tre veckor.
+              Structured developer mentoring. Documented the software
+              architecture vision and decision log, reducing onboarding time
+              from three months to three weeks.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
                 Datadog/Kibana monitoring:
               </strong>{" "}
-              Post-production monitoring som gav teamet realtidsinsyn i
-              systemhälsa och prestanda.
+              Post-production monitoring that gave the team real-time insight
+              into system health and performance.
             </li>
           </ul>
         }
@@ -105,15 +104,16 @@ export default function GlobalEvManufacturerCaseStudyPage() {
         outcomeNarrative={
           <>
             <p className="mb-4">
-              Under de fyra år jag samarbetade med kunden ökade teamets leveranstakt med
-              45%. Uptime förbättrades från 98.5% till 99.9% och
-              onboarding-tiden minskade från tre månader till tre veckor.
+              During the four years I worked with the client, the team&apos;s
+              delivery pace increased by 45%. Uptime improved from 98.5% to
+              99.9%, and onboarding time dropped from three months to three
+              weeks.
             </p>
             <p>
-              Den strukturerade tekniska ledningen gav kunden en stabil
-              grund för sina finansiella integrationer. Teamet kunde hantera
-              nya leverantörer med förtroende och noll säkerhetsincidenter
-              under hela uppdragsperioden.
+              The structured technical leadership gave the client a stable
+              foundation for their financial integrations. The team could
+              handle new providers with confidence and had zero security
+              incidents during the full engagement.
             </p>
           </>
         }

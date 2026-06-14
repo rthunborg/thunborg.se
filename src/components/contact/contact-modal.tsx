@@ -31,12 +31,12 @@ export function ContactModal({
 }: ContactModalProps) {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [namn, setNamn] = useState("");
-  const [organisation, setOrganisation] = useState("");
-  const [epost, setEpost] = useState("");
-  const [telefon, setTelefon] = useState("");
-  const [amne, setAmne] = useState(preselectedSubject ?? "");
-  const [meddelande, setMeddelande] = useState("");
+  const [name, setName] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState(preselectedSubject ?? "");
+  const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [turnstileError, setTurnstileError] = useState(false);
@@ -51,7 +51,7 @@ export function ContactModal({
 
   useEffect(() => {
     if (preselectedSubject !== undefined) {
-      setAmne(preselectedSubject);
+      setSubject(preselectedSubject);
     }
   }, [preselectedSubject]);
 
@@ -60,12 +60,12 @@ export function ContactModal({
       const timer = setTimeout(() => {
         setFormState("idle");
         setErrorMessage("");
-        setNamn("");
-        setOrganisation("");
-        setEpost("");
-        setTelefon("");
-        setAmne(preselectedSubject ?? "");
-        setMeddelande("");
+        setName("");
+        setOrganization("");
+        setEmail("");
+        setPhone("");
+        setSubject(preselectedSubject ?? "");
+        setMessage("");
         setHoneypot("");
         setTurnstileToken(null);
         setTurnstileError(false);
@@ -90,14 +90,14 @@ export function ContactModal({
     if (siteKey && turnstileError) {
       setFormState("error");
       setErrorMessage(
-        `Verifieringen kunde inte laddas. Mejla mig direkt på ${site.email}`,
+        `Verification could not be loaded. Email me directly at ${site.email}`,
       );
       return;
     }
 
     if (siteKey && !turnstileToken) {
       setFormState("error");
-      setErrorMessage("Slutför verifieringen innan du skickar formuläret.");
+      setErrorMessage("Complete the verification before submitting the form.");
       return;
     }
 
@@ -109,12 +109,12 @@ export function ContactModal({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          namn,
-          organisation: organisation || undefined,
-          epost,
-          telefon: telefon || undefined,
-          amne: amne || undefined,
-          meddelande,
+          name,
+          organization: organization || undefined,
+          email,
+          phone: phone || undefined,
+          subject: subject || undefined,
+          message,
           honeypot: honeypot || undefined,
           turnstileToken: turnstileToken || undefined,
           _t: mountTimestamp,
@@ -138,7 +138,7 @@ export function ContactModal({
       setErrorMessage(
         error instanceof Error && error.message !== "SERVER_ERROR"
           ? error.message
-          : `Något gick fel. Försök igen eller mejla mig direkt på ${site.email}`,
+          : `Something went wrong. Try again or email me directly at ${site.email}`,
       );
     }
   }
@@ -182,12 +182,12 @@ export function ContactModal({
                       role="status"
                     >
                       <Dialog.Title className="sr-only">
-                        Meddelande skickat
+                        Message sent
                       </Dialog.Title>
                       <Dialog.Close asChild>
                         <button
                           className="absolute top-6 right-6 rounded-lg p-2 text-[#A1A1A1] hover:text-[#EDEDED] hover:bg-[rgba(255,255,255,0.06)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
-                          aria-label="Stäng"
+                          aria-label="Close"
                         >
                           <X className="h-5 w-5" />
                         </button>
@@ -205,10 +205,10 @@ export function ContactModal({
                         <CheckCircle className="h-12 w-12 text-[#22C55E] mx-auto" />
                       </motion.div>
                       <p className="text-lg font-semibold text-[#EDEDED] mb-2">
-                        Tack!
+                        Thanks!
                       </p>
                       <p className="text-sm text-[#A1A1A1]">
-                        Jag hör av mig så fort som möjligt!
+                        I&apos;ll get back to you as soon as possible.
                       </p>
                     </motion.div>
                   ) : (
@@ -220,12 +220,12 @@ export function ContactModal({
                     >
                       <div className="flex items-center justify-between mb-6">
                         <Dialog.Title className="text-xl font-bold text-[#EDEDED]">
-                          Ta kontakt
+                          Get in touch
                         </Dialog.Title>
                         <Dialog.Close asChild>
                           <button
                             className="rounded-lg p-2 text-[#A1A1A1] hover:text-[#EDEDED] hover:bg-[rgba(255,255,255,0.06)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
-                            aria-label="Stäng"
+                            aria-label="Close"
                           >
                             <X className="h-5 w-5" />
                           </button>
@@ -233,8 +233,8 @@ export function ContactModal({
                       </div>
 
                       <Dialog.Description className="text-sm text-[#A1A1A1] mb-6">
-                        Berätta kort vad du vill prata om, så återkommer jag
-                        så snart jag kan.
+                        Briefly tell me what you want to discuss, and I&apos;ll
+                        get back to you as soon as I can.
                       </Dialog.Description>
                     <form
                       onSubmit={handleSubmit}
@@ -255,108 +255,108 @@ export function ContactModal({
                       </div>
 
                       <div>
-                        <label htmlFor="contact-namn" className={labelStyles}>
-                          Namn *
+                        <label htmlFor="contact-name" className={labelStyles}>
+                          Name *
                         </label>
                         <input
-                          id="contact-namn"
+                          id="contact-name"
                           type="text"
                           required
-                          value={namn}
-                          onChange={(e) => setNamn(e.target.value)}
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           className={inputStyles}
-                          placeholder="Ditt namn"
+                          placeholder="Your name"
                         />
                       </div>
 
                       <div>
                         <label
-                          htmlFor="contact-organisation"
+                          htmlFor="contact-organization"
                           className={labelStyles}
                         >
-                          Organisation
+                          Organization
                         </label>
                         <input
-                          id="contact-organisation"
+                          id="contact-organization"
                           type="text"
-                          value={organisation}
-                          onChange={(e) => setOrganisation(e.target.value)}
+                          value={organization}
+                          onChange={(e) => setOrganization(e.target.value)}
                           className={inputStyles}
-                          placeholder="Företag, team eller sammanhang"
+                          placeholder="Company, team, or context"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="contact-epost" className={labelStyles}>
-                          E-post *
+                        <label htmlFor="contact-email" className={labelStyles}>
+                          Email *
                         </label>
                         <input
-                          id="contact-epost"
+                          id="contact-email"
                           type="email"
                           required
-                          value={epost}
-                          onChange={(e) => setEpost(e.target.value)}
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           className={inputStyles}
-                          placeholder="namn@example.com"
+                          placeholder="name@example.com"
                         />
                       </div>
 
                       <div>
                         <label
-                          htmlFor="contact-telefon"
+                          htmlFor="contact-phone"
                           className={labelStyles}
                         >
-                          Telefon
+                          Phone
                         </label>
                         <input
-                          id="contact-telefon"
+                          id="contact-phone"
                           type="tel"
-                          value={telefon}
-                          onChange={(e) => setTelefon(e.target.value)}
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
                           className={inputStyles}
-                          placeholder="070-123 45 67"
+                          placeholder="+46 70 123 45 67"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="contact-amne" className={labelStyles}>
-                          Ämne
+                        <label htmlFor="contact-subject" className={labelStyles}>
+                          Subject
                         </label>
                         <select
-                          id="contact-amne"
-                          value={amne}
-                          onChange={(e) => setAmne(e.target.value)}
+                          id="contact-subject"
+                          value={subject}
+                          onChange={(e) => setSubject(e.target.value)}
                           className={inputStyles}
                         >
-                          <option value="">Välj ämne...</option>
-                          <option value="Uppdrag eller samarbete">
-                            Uppdrag eller samarbete
+                          <option value="">Choose a subject...</option>
+                          <option value="Assignment or collaboration">
+                            Assignment or collaboration
                           </option>
-                          <option value="Rekrytering eller konsultroll">
-                            Rekrytering eller konsultroll
+                          <option value="Recruitment or consulting role">
+                            Recruitment or consulting role
                           </option>
-                          <option value="Agentic AI eller föreläsning">
-                            Agentic AI eller föreläsning
+                          <option value="Agentic AI or speaking engagement">
+                            Agentic AI or speaking engagement
                           </option>
-                          <option value="Annat">Annat</option>
+                          <option value="Other">Other</option>
                         </select>
                       </div>
 
                       <div>
                         <label
-                          htmlFor="contact-meddelande"
+                          htmlFor="contact-message"
                           className={labelStyles}
                         >
-                          Meddelande *
+                          Message *
                         </label>
                         <textarea
-                          id="contact-meddelande"
+                          id="contact-message"
                           required
                           rows={4}
-                          value={meddelande}
-                          onChange={(e) => setMeddelande(e.target.value)}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                           className={`${inputStyles} resize-y`}
-                          placeholder="Skriv några rader om vad du vill diskutera..."
+                          placeholder="Write a few lines about what you want to discuss..."
                         />
                       </div>
 
@@ -390,19 +390,19 @@ export function ContactModal({
 
                       {siteKey && !turnstileError && !turnstileToken && (
                         <p className="text-sm text-[#A1A1A1] text-center">
-                          Slutför verifieringen för att skicka formuläret.
+                          Complete the verification to submit the form.
                         </p>
                       )}
 
                       {turnstileError && (
                         <p className="text-sm text-[#A1A1A1] text-center">
-                          Verifieringen kunde inte laddas. Ta kontakt direkt
-                          via{" "}
+                          Verification could not be loaded. Contact me directly
+                          by{" "}
                           <a
                             href={`mailto:${obfuscateEmail("rasmus", "thunborg.se")}`}
                             className="text-[#F59E0B] underline"
                           >
-                            e-post
+                            email
                           </a>
                           .
                         </p>
@@ -439,7 +439,7 @@ export function ContactModal({
                             />
                           </svg>
                         )}
-                        {formState === "submitting" ? "Skickar..." : "Skicka"}
+                        {formState === "submitting" ? "Sending..." : "Send"}
                       </button>
                     </form>
                     </motion.div>

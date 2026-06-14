@@ -2,14 +2,14 @@ import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Så arbetar jag | Rasmus Thunborg",
+  title: "How I work | Rasmus Thunborg",
   description:
-    "Min arbetsmetodik: förstå läget, skapa riktning, genomföra nära koden och lämna över så teamet kan äga resultatet.",
+    "My working method: understand the situation, create direction, deliver close to the code, and hand over so the team can own the result.",
   keywords: [
     "Rasmus Thunborg",
-    "arbetsmetodik",
-    "mjukvaruarkitektur",
-    "teknisk ledning",
+    "working method",
+    "software architecture",
+    "technical leadership",
     "software engineering",
   ],
   path: "/methodology",
@@ -18,35 +18,35 @@ export const metadata = createPageMetadata({
 const phases = [
   {
     number: "01",
-    name: "Förstå",
-    tagline: "Jag börjar med verkligheten, inte en färdig lösning",
+    name: "Understand",
+    tagline: "I start with reality, not a ready-made solution",
     description:
-      "Jag läser kod, pratar med teamet och kartlägger systemets faktiska beteende. Målet är att skilja tekniska symptom från orsaker och hitta var insatsen gör mest nytta.",
-    deliverable: "En tydlig bild av nuläge, risker och prioriteringar",
+      "I read code, talk to the team, and map how the system actually behaves. The goal is to separate technical symptoms from causes and find where the effort creates the most value.",
+    deliverable: "A clear view of the current state, risks, and priorities",
   },
   {
     number: "02",
-    name: "Rikta",
-    tagline: "Tekniska beslut ska gå att använda",
+    name: "Direct",
+    tagline: "Technical decisions need to be usable",
     description:
-      "Jag formulerar en riktning som teamet kan följa: systemgränser, dataflöden, risker, sekvensering och tydliga tradeoffs. Beslut dokumenteras lagom mycket, men tillräckligt för att bära över tid.",
-    deliverable: "Beslut, principer och nästa steg som teamet kan agera på",
+      "I define a direction the team can follow: system boundaries, data flows, risks, sequencing, and clear tradeoffs. Decisions are documented with enough detail to hold up over time.",
+    deliverable: "Decisions, principles, and next steps the team can act on",
   },
   {
     number: "03",
-    name: "Genomför",
-    tagline: "Arkitektur blir verklig först i koden",
+    name: "Deliver",
+    tagline: "Architecture becomes real in the code",
     description:
-      "Jag arbetar nära implementationen: kod, granskning, testning, pipelines, driftbarhet och observability. Det gör att lösningen möter verkliga begränsningar istället för att stanna som ett diagram.",
-    deliverable: "Levererad förändring med fungerande teknisk grund",
+      "I work close to implementation: code, review, testing, pipelines, operability, and observability. That makes the solution meet real constraints instead of staying as a diagram.",
+    deliverable: "Delivered change with a working technical foundation",
   },
   {
     number: "04",
-    name: "Lämna över",
-    tagline: "Teamet ska kunna fortsätta utan mig",
+    name: "Hand over",
+    tagline: "The team should be able to continue without me",
     description:
-      "Jag prioriterar kunskapsöverföring, dokumentation och tydligt ägarskap. En bra insats ska göra teamet starkare, inte skapa ett nytt beroende.",
-    deliverable: "Överlämnad kunskap, dokumentation och tydligt ägarskap",
+      "I prioritize knowledge transfer, documentation, and clear ownership. A good engagement should make the team stronger, not create a new dependency.",
+    deliverable: "Transferred knowledge, documentation, and clear ownership",
   },
 ] as const;
 
@@ -55,11 +55,12 @@ export default function MetodikPage() {
       <PageShell breadcrumbSegments={[{ label: "methodology" }]}>
         <div className="mb-12 md:mb-16">
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
-            Så arbetar jag
+            How I work
           </h1>
           <p className="text-lg text-[#A1A1A1] max-w-2xl leading-relaxed">
-            Min metod är enkel: förstå läget, skapa riktning, genomföra nära
-            koden och lämna över så att teamet kan äga resultatet vidare.
+            My method is simple: understand the situation, create direction,
+            deliver close to the code, and hand over so the team can continue
+            owning the result.
           </p>
         </div>
 
@@ -87,7 +88,7 @@ export default function MetodikPage() {
                   </p>
                   <div className="flex items-start gap-3">
                     <span className="font-mono text-xs text-[#919191] uppercase tracking-widest whitespace-nowrap pt-0.5">
-                      Leverabel
+                      Deliverable
                     </span>
                     <p className="text-sm text-[#EDEDED]">
                       {phase.deliverable}

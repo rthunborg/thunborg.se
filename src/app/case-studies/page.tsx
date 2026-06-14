@@ -3,16 +3,16 @@ import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Utvalda projekt | Rasmus Thunborg",
+  title: "Selected projects | Rasmus Thunborg",
   description:
-    "Utvalda projekt och uppdrag från Rasmus Thunborgs arbete med mjukvaruarkitektur, backend, moln, teknisk ledning och modernisering.",
+    "Selected projects and assignments from Rasmus Thunborg's work with software architecture, backend systems, cloud, technical leadership, and modernization.",
   keywords: [
     "Rasmus Thunborg",
-    "utvalda projekt",
+    "selected projects",
     "case studies",
-    "mjukvaruarkitektur",
+    "software architecture",
     "backend",
-    "teknisk ledning",
+    "technical leadership",
   ],
   path: "/case-studies",
 });
@@ -20,53 +20,53 @@ export const metadata = createPageMetadata({
 const caseStudies = [
   {
     slug: "nordic-shipping",
-    company: "Nordiskt Rederi",
-    title: "Från Excel-kaos till realtidsplattform för säsongsrekrytering",
+    company: "Nordic Shipping Company",
+    title: "From Excel Chaos to a Real-Time Seasonal Recruitment Platform",
     summary:
-      "Ersatte manuella Excel-flöden med en modern realtidsplattform med rollbaserad åtkomst för sju externa parter, ändringslogg och GDPR-grund.",
-    metric: { label: "Datadelning", delta: "↓ ~95%" },
-    industry: "Maritim / HR",
-    timeline: "4 månader (2025–2026)",
+      "Replaced manual Excel flows with a modern real-time platform with role-based access for seven external partners, an audit trail, and a GDPR-ready foundation.",
+    metric: { label: "Data sharing", delta: "↓ ~95%" },
+    industry: "Maritime / HR",
+    timeline: "4 months (2025–2026)",
   },
   {
     slug: "nordic-hr-group",
-    company: "Nordeuropeisk HR-Koncern",
-    title: "Automatiserad Credential-Rotation",
+    company: "Northern European HR Group",
+    title: "Automated Credential Rotation",
     summary:
-      "Från manuellt hanterade credentials till automatiserad rotation var 30:e dag med AWS Lambda och GitHub Actions.",
-    metric: { label: "Säkerhetsrisk", delta: "Hög → Minimal" },
+      "Moved from manually handled credentials to automated rotation every 30 days with AWS Lambda and GitHub Actions.",
+    metric: { label: "Security risk", delta: "High → Minimal" },
     industry: "HR / Enterprise SAAS",
-    timeline: "4 månader (2026)",
+    timeline: "4 months (2026)",
   },
   {
     slug: "nordic-fashion-chain",
-    company: "Ledande Nordisk Modekedja",
-    title: "Från Legacy till Eventdriven Arkitektur",
+    company: "Leading Nordic Fashion Chain",
+    title: "From Legacy to Event-Driven Architecture",
     summary:
-      "Moderniserade legacy-system för order, lager och WMS med .NET microservices, event sourcing och Azure/Kubernetes.",
-    metric: { label: "Incidenter", delta: "↓ 88%" },
-    industry: "Fashion / E-handel",
-    timeline: "2.5 år (on demand)",
+      "Modernized legacy systems for order, inventory, and WMS with .NET microservices, event sourcing, and Azure/Kubernetes.",
+    metric: { label: "Incidents", delta: "↓ 88%" },
+    industry: "Fashion / E-commerce",
+    timeline: "2.5 years (on demand)",
   },
   {
     slug: "global-furniture-group",
-    company: "Världsledande Möbelkoncern",
-    title: "Backend-Arkitektur för 3D-Modellering",
+    company: "Global Furniture Group",
+    title: "Backend Architecture for 3D Modeling",
     summary:
-      "Komplett .NET backend-arkitektur för intern 3D-modelleringsapp, inklusive IAM, CI/CD och legacy-migration.",
-    metric: { label: "Design till MVP", delta: "8 veckor" },
-    industry: "Detaljhandel / Enterprise",
-    timeline: "6 månader (2021)",
+      "Complete .NET backend architecture for an internal 3D modeling app, including IAM, CI/CD, and legacy migration.",
+    metric: { label: "Design to MVP", delta: "8 weeks" },
+    industry: "Retail / Enterprise",
+    timeline: "6 months (2021)",
   },
   {
     slug: "global-ev-manufacturer",
-    company: "Världsledande Elbilstillverkare",
-    title: "Teknisk Ledning för Finansiella Integrationer",
+    company: "Global EV Manufacturer",
+    title: "Technical Leadership for Financial Integrations",
     summary:
-      "Senior teknisk ledning som drev arkitekturbeslut, handledde teamet och stabiliserade komplexa finansiella integrationer.",
-    metric: { label: "Leveranstakt", delta: "+45%" },
+      "Senior technical leadership that drove architecture decisions, mentored the team, and stabilized complex financial integrations.",
+    metric: { label: "Delivery pace", delta: "+45%" },
     industry: "Automotive / FinTech",
-    timeline: "4 år (2021–2025)",
+    timeline: "4 years (2021–2025)",
   }
 
 ] as const;
@@ -79,12 +79,12 @@ export default function CaseStudiesPage() {
     <PageShell breadcrumbSegments={[{ label: "case-studies" }]}>
         <div className="mb-12 md:mb-16">
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
-            Utvalda projekt
+            Selected projects
           </h1>
           <p className="text-lg text-[#A1A1A1] max-w-2xl leading-relaxed">
-            Några uppdrag där jag har arbetat nära arkitektur, kod,
-            integrationer, plattform och teknisk ledning. Varje projekt visar
-            en annan del av min praktiska erfarenhet.
+            A few assignments where I worked close to architecture, code,
+            integrations, platform, and technical leadership. Each project
+            shows a different part of my practical experience.
           </p>
         </div>
 

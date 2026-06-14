@@ -14,14 +14,14 @@ export function StructuredData() {
                 email: `mailto:${site.email}`,
                 address: {
                     "@type": "PostalAddress",
-                    addressLocality: "Göteborg",
+                    addressLocality: "Gothenburg",
                     addressCountry: "SE"
                 },
                 description: site.description,
                 knowsAbout: [
                     ".NET", "C#", "Azure", "AWS", "Kubernetes", "Terraform",
                     "Microservices", "Event Sourcing", "Domain-Driven Design",
-                    "CI/CD", "legacy-modernisering", "teknisk ledning",
+                    "CI/CD", "legacy modernization", "technical leadership",
                     "Agentic AI", "Model Context Protocol", "Google Agent2Agent"
                 ],
                 sameAs: [site.linkedin]
@@ -32,7 +32,7 @@ export function StructuredData() {
                 url: site.url,
                 name: site.name,
                 description: site.description,
-                inLanguage: "sv"
+                inLanguage: "en"
             }
         ]
     };

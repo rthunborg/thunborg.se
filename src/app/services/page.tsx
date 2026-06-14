@@ -2,15 +2,15 @@ import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Vad jag kan bidra med | Rasmus Thunborg",
+  title: "Where I can help | Rasmus Thunborg",
   description:
-    "Områden där Rasmus Thunborg kan bidra: mjukvaruarkitektur, backend, molnplattformar, teknisk ledning, integrationer och Agentic AI.",
+    "Areas where Rasmus Thunborg can help: software architecture, backend systems, cloud platforms, technical leadership, integrations, and Agentic AI.",
   keywords: [
     "Rasmus Thunborg",
-    "mjukvaruarkitektur",
+    "software architecture",
     "backend",
-    "molnarkitektur",
-    "teknisk ledning",
+    "cloud architecture",
+    "technical leadership",
     "Agentic AI",
   ],
   path: "/services",
@@ -18,69 +18,69 @@ export const metadata = createPageMetadata({
 
 const contributionAreas = [
   {
-    name: "Mjukvaruarkitektur",
-    tagline: "Tekniska vägval som håller över tid",
+    name: "Software architecture",
+    tagline: "Technical choices that hold up over time",
     scope:
-      "Jag hjälper team förstå sin nuvarande arkitektur, hitta flaskhalsar och välja en riktning som går att genomföra utan att tappa leveransförmåga.",
+      "I help teams understand their current architecture, find bottlenecks, and choose a direction they can execute without losing delivery capacity.",
     examples: [
-      "Domänmodellering och systemgränser",
-      "Modernisering av legacy-system",
-      "Tekniska beslutsunderlag och arkitekturdokumentation",
+      "Domain modeling and system boundaries",
+      "Legacy system modernization",
+      "Technical decision support and architecture documentation",
     ],
   },
   {
-    name: "Backend och integrationer",
-    tagline: "Robusta tjänster, API:er och dataflöden",
+    name: "Backend and integrations",
+    tagline: "Robust services, APIs, and data flows",
     scope:
-      "Min tyngdpunkt ligger i .NET, C#, API-design, integrationsflöden och system som behöver fungera stabilt även när verksamheten är komplex.",
+      "My center of gravity is .NET, C#, API design, integration flows, and systems that need to stay reliable even when the business domain is complex.",
     examples: [
-      ".NET microservices och REST/GraphQL",
-      "Eventdrivna flöden med Kafka, Service Bus och Event Grid",
-      "Integrationer mot externa leverantörer och interna plattformar",
+      ".NET microservices and REST/GraphQL",
+      "Event-driven flows with Kafka, Service Bus, and Event Grid",
+      "Integrations with external suppliers and internal platforms",
     ],
   },
   {
-    name: "Moln och plattform",
-    tagline: "Leveransbar infrastruktur med tydligt ägarskap",
+    name: "Cloud and platform",
+    tagline: "Deliverable infrastructure with clear ownership",
     scope:
-      "Jag arbetar praktiskt med Azure, AWS, Kubernetes, Terraform och CI/CD. Fokus ligger på miljöer som går att förstå, drifta och förändra.",
+      "I work hands-on with Azure, AWS, Kubernetes, Terraform, and CI/CD. The focus is on environments that can be understood, operated, and changed.",
     examples: [
-      "AWS Lambda, DynamoDB och Secrets Manager",
-      "Azure, Kubernetes, Cosmos DB och Blob Storage",
-      "GitHub Actions, Azure DevOps och infrastructure as code",
+      "AWS Lambda, DynamoDB, and Secrets Manager",
+      "Azure, Kubernetes, Cosmos DB, and Blob Storage",
+      "GitHub Actions, Azure DevOps, and infrastructure as code",
     ],
   },
   {
-    name: "Teknisk ledning",
-    tagline: "Riktning, tempo och kvalitet i samma arbete",
+    name: "Technical leadership",
+    tagline: "Direction, pace, and quality in the same work",
     scope:
-      "Jag kan kliva in nära ett team och bidra med teknisk riktning, mentoring, prioritering och genomförande utan att skapa onödiga processlager.",
+      "I can work close to a team and contribute technical direction, mentoring, prioritization, and delivery without creating unnecessary process layers.",
     examples: [
-      "Interim technical lead i produktteam",
-      "Mentoring och kunskapsöverföring",
-      "Samarbete med produktägare, arkitekter och drift",
+      "Interim technical lead in product teams",
+      "Mentoring and knowledge transfer",
+      "Collaboration with product owners, architects, and operations",
     ],
   },
   {
     name: "Agentic AI",
-    tagline: "Praktisk AI i utvecklarflöden och systemdesign",
+    tagline: "Practical AI in developer workflows and system design",
     scope:
-      "Jag följer och arbetar aktivt med agentbaserade utvecklarflöden, MCP, A2A, LLM-säkerhet och hur AI kan användas utan att tappa kontroll över kvalitet.",
+      "I follow and actively work with agent-based developer workflows, MCP, A2A, LLM security, and how AI can be used without losing control over quality.",
     examples: [
-      "AI-stöd i utveckling, analys och testning",
-      "Model Context Protocol och agentintegrationer",
-      "LLM-säkerhet, prompt engineering och ansvarsfull användning",
+      "AI support in development, analysis, and testing",
+      "Model Context Protocol and agent integrations",
+      "LLM security, prompt engineering, and responsible use",
     ],
   },
   {
-    name: "Teknisk analys",
-    tagline: "Från oklar situation till konkret nästa steg",
+    name: "Technical analysis",
+    tagline: "From unclear situation to concrete next step",
     scope:
-      "Jag är van vid att gå in i komplexa sammanhang, analysera teknik och organisation tillsammans, och formulera en väg framåt som är tydlig nog att agera på.",
+      "I am used to entering complex situations, analyzing technology and organization together, and defining a way forward that is clear enough to act on.",
     examples: [
-      "Kodbas- och arkitekturgenomgångar",
-      "Riskbedömning inför större tekniska beslut",
-      "Planer för migration, stabilisering och leveransförbättring",
+      "Codebase and architecture reviews",
+      "Risk assessment before major technical decisions",
+      "Plans for migration, stabilization, and delivery improvement",
     ],
   },
 ] as const;
@@ -90,11 +90,11 @@ export default function ServicesPage() {
     <PageShell breadcrumbSegments={[{ label: "services" }]}>
       <div className="mb-12 md:mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
-          Vad jag kan bidra med
+          Where I can help
         </h1>
         <p className="max-w-2xl text-lg leading-relaxed text-[#A1A1A1]">
-          En praktisk översikt över de områden där jag brukar skapa mest nytta
-          i team, produkter och tekniska organisationer.
+          A practical overview of the areas where I usually create the most
+          value for teams, products, and technical organizations.
         </p>
       </div>
 

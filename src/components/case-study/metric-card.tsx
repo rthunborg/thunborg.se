@@ -4,7 +4,7 @@ export function MetricCard({ metric }: { metric: CaseStudyMetric }) {
   return (
     <div
       className="bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl p-5 sm:p-6"
-      aria-label={`${metric.label}: från ${metric.before} till ${metric.after}, förändring ${metric.delta}`}
+      aria-label={`${metric.label}: from ${metric.before} to ${metric.after}, change ${metric.delta}`}
     >
       <p className="font-mono text-xs uppercase tracking-widest text-[#919191] mb-3">
         {metric.label}

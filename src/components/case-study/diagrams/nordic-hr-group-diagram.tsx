@@ -38,7 +38,7 @@ export function NordicHrGroupDiagram() {
     <div className="w-full">
       <svg
         role="img"
-        aria-label="Arkitekturdiagram: Automatiserad credential-rotation med AWS Secrets Manager, Lambda, MSSQL och RabbitMQ, deployad via GitHub Actions och CloudFormation genom tre miljöer"
+        aria-label="Architecture diagram: Automated credential rotation with AWS Secrets Manager, Lambda, MSSQL, and RabbitMQ, deployed through GitHub Actions and CloudFormation across three environments"
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export function NordicHrGroupDiagram() {
           fontSize="9"
           letterSpacing="0.08em"
         >
-          AUTOMATISERAD ROTATIONSCYKEL
+          AUTOMATED ROTATION CYCLE
         </text>
 
         {/* === Circular rotation arrows === */}
@@ -160,7 +160,7 @@ export function NordicHrGroupDiagram() {
             fill="#919191"
             fontSize="8"
           >
-            AWS · 30-dagars rotation
+            AWS · 30-day rotation
           </text>
         </g>
 
@@ -232,7 +232,7 @@ export function NordicHrGroupDiagram() {
             fontSize="10"
             fontWeight="600"
           >
-            Målsystem
+            Target systems
           </text>
           <text
             x={targetsX + boxW / 2}
@@ -266,7 +266,7 @@ export function NordicHrGroupDiagram() {
           fontSize="9"
           letterSpacing="0.08em"
         >
-          INFRASTRUKTUR & CI/CD
+          INFRASTRUCTURE & CI/CD
         </text>
 
         {/* === CI/CD Box === */}
@@ -359,7 +359,7 @@ export function NordicHrGroupDiagram() {
           fontSize="9"
           letterSpacing="0.08em"
         >
-          MILJÖPIPELINE
+          ENVIRONMENT PIPELINE
         </text>
 
         {/* === Environment boxes with arrows === */}

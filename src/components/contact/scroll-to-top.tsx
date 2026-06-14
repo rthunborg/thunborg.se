@@ -29,7 +29,7 @@ export function ScrollToTop() {
         <motion.button
           type="button"
           onClick={scrollUp}
-          aria-label="Scrolla till toppen"
+          aria-label="Scroll to top"
           className="fixed bottom-6 right-6 z-40 rounded-full w-12 h-12 flex items-center justify-center bg-[#F59E0B] text-[#0A0A0A] shadow-lg shadow-amber-500/20 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] motion-reduce:transition-none"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

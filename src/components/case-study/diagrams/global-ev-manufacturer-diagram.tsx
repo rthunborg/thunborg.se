@@ -196,16 +196,16 @@ export function GlobalEvManufacturerDiagram() {
   };
 
   const providers = [
-    { x: 16, y: 148, label: "Leverantör A", sub: "Finans-API" },
-    { x: 16, y: 228, label: "Leverantör B", sub: "Finans-API" },
-    { x: svgW - 16 - extBoxW, y: 188, label: "Leverantör C", sub: "Finans-API" },
+    { x: 16, y: 148, label: "Provider A", sub: "Finance API" },
+    { x: 16, y: 228, label: "Provider B", sub: "Finance API" },
+    { x: svgW - 16 - extBoxW, y: 188, label: "Provider C", sub: "Finance API" },
   ];
 
   return (
     <div className="w-full">
       <svg
         role="img"
-        aria-label="Arkitekturdiagram: Serverlös hub-and-spoke-arkitektur med AWS Lambda som centralt nav, kopplat till externa finansiella leverantörer via OAuth2/TLS"
+        aria-label="Architecture diagram: Serverless hub-and-spoke architecture with AWS Lambda as the central hub, connected to external financial providers through OAuth2/TLS"
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +222,7 @@ export function GlobalEvManufacturerDiagram() {
           fontSize="8"
           letterSpacing="0.08em"
         >
-          KLIENT
+          CLIENT
         </text>
 
         <DiagramInternalBox
@@ -298,7 +298,7 @@ export function GlobalEvManufacturerDiagram() {
           letterSpacing="0.06em"
           fontWeight="600"
         >
-          EXTERNA
+          EXTERNAL
         </text>
         <text
           x={svgW - 76}
@@ -309,7 +309,7 @@ export function GlobalEvManufacturerDiagram() {
           letterSpacing="0.06em"
           fontWeight="600"
         >
-          EXTERNA
+          EXTERNAL
         </text>
 
         {providers.map((p) => (
@@ -364,7 +364,7 @@ export function GlobalEvManufacturerDiagram() {
           fontSize="8"
           letterSpacing="0.08em"
         >
-          DATALAGER
+          DATA STORE
         </text>
 
         <DiagramInternalBox
@@ -384,7 +384,7 @@ export function GlobalEvManufacturerDiagram() {
           fontSize="8"
           letterSpacing="0.08em"
         >
-          PLATTFORM
+          PLATFORM
         </text>
 
         <DiagramInternalBox

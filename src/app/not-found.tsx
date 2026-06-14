@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sidan hittades inte | Rasmus Thunborg",
+  title: "Page not found | Rasmus Thunborg",
   robots: { index: false, follow: false },
 };
 
@@ -15,16 +15,16 @@ export default function NotFound() {
             404
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#EDEDED] mb-4">
-            Sidan hittades inte
+            Page not found
           </h1>
           <p className="text-base leading-relaxed text-[#A1A1A1] max-w-md mb-8">
-            Sidan du letar efter finns inte eller har flyttats.
+            The page you are looking for does not exist or has moved.
           </p>
           <Link
             href="/"
             className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-[#0A0A0A] font-semibold rounded-lg text-sm outline-none ring-offset-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 transition-colors duration-200 ease-out motion-reduce:transition-none"
           >
-            Till startsidan
+            Go to homepage
           </Link>
         </div>
       </div>

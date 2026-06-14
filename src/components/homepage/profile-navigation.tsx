@@ -4,28 +4,28 @@ import { ChevronRight } from "lucide-react";
 const PROFILE_OPTIONS = [
   {
     id: "about",
-    label: "Läs min CV-profil, bakgrund och tekniska bredd.",
+    label: "Read my CV profile, background, and technical breadth.",
     href: "/about",
-    ariaLabel: "Läs min CV-profil, bakgrund och tekniska bredd.",
+    ariaLabel: "Read my CV profile, background, and technical breadth.",
   },
   {
     id: "case-studies",
-    label: "Se utvalda projekt och uppdrag från de senaste åren.",
+    label: "See selected projects and assignments from recent years.",
     href: "/case-studies",
-    ariaLabel: "Se utvalda projekt och uppdrag från de senaste åren.",
+    ariaLabel: "See selected projects and assignments from recent years.",
   },
   {
     id: "methodology",
-    label: "Förstå hur jag arbetar med arkitektur, kod och team.",
+    label: "Understand how I work with architecture, code, and teams.",
     href: "/methodology",
-    ariaLabel: "Förstå hur jag arbetar med arkitektur, kod och team.",
+    ariaLabel: "Understand how I work with architecture, code, and teams.",
   },
   {
     id: "agentic-ai",
-    label: "Utforska min inriktning inom Agentic AI och moderna utvecklarflöden.",
+    label: "Explore my focus on Agentic AI and modern developer workflows.",
     href: "/agentic-ai",
     ariaLabel:
-      "Utforska min inriktning inom Agentic AI och moderna utvecklarflöden.",
+      "Explore my focus on Agentic AI and modern developer workflows.",
   },
 ] as const;
 
@@ -33,7 +33,7 @@ export function ProfileNavigation() {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <nav
-        aria-label="Välj vad du vill läsa om"
+        aria-label="Choose what you want to read about"
         className="flex flex-col gap-4"
       >
         <ul className="flex flex-col gap-4">
@@ -60,7 +60,7 @@ export function ProfileNavigation() {
           href="/services"
           className="min-h-11 inline-flex items-center text-sm text-[#A1A1A1] no-underline outline-none ring-offset-[#0A0A0A] transition-colors duration-200 ease-out hover:text-[#EDEDED] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 motion-reduce:transition-none"
         >
-          Vill du veta vad jag kan bidra med? Läs här.
+          Want to know where I can help? Read here.
         </Link>
       </div>
     </div>

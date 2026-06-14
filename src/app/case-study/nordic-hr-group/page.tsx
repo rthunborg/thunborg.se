@@ -4,39 +4,39 @@ import { NordicHrGroupDiagram } from "@/components/case-study/diagrams/nordic-hr
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Automatiserad credential-rotation | Rasmus Thunborg",
+  title: "Automated credential rotation | Rasmus Thunborg",
   description:
-    "Utvalt projekt: från manuellt hanterade credentials till automatiserad rotation med AWS Lambda, GitHub Actions och least privilege.",
+    "Selected project: from manually handled credentials to automated rotation with AWS Lambda, GitHub Actions, and least privilege.",
   path: "/case-study/nordic-hr-group",
 });
 
 const metrics: CaseStudyMetric[] = [
   {
     label: "Credential-rotation",
-    before: "Manuell",
-    after: "Var 30:e dag",
-    delta: "Automatiserad",
+    before: "Manual",
+    after: "Every 30 days",
+    delta: "Automated",
     improvement: "positive",
   },
   {
     label: "Deploy-process",
-    before: "Manuell",
+    before: "Manual",
     after: "CI/CD",
-    delta: "Automatiserad",
+    delta: "Automated",
     improvement: "positive",
   },
   {
-    label: "Miljöer",
+    label: "Environments",
     before: "1",
     after: "3",
     delta: "Test/Staging/Prod",
     improvement: "positive",
   },
   {
-    label: "Säkerhetsrisk",
-    before: "Hög",
+    label: "Security risk",
+    before: "High",
     after: "Minimal",
-    delta: "↓ Signifikant",
+    delta: "↓ Significant",
     improvement: "positive",
   },
 ];
@@ -45,27 +45,27 @@ export default function NordicHrGroupCaseStudyPage() {
   return (
       <CaseStudyLayout
         slug="nordic-hr-group"
-        title="Automatiserad Credential-Rotation"
+        title="Automated Credential Rotation"
         industry="HR / Enterprise SAAS"
-        timeline="4 månader (2026)"
+        timeline="4 months (2026)"
         problemNarrative={
           <>
             <p className="mb-4">
-              Kundens HR-plattform hanterar känslig HR- och lönedata åt
-              deras kunder. Tjänstekonton mot MSSQL-databaser och
-              RabbitMQ-köer hade historiskt hanterats manuellt, med lösenord
-              som sällan eller aldrig byttes ut.
+              The client&apos;s HR platform handles sensitive HR and payroll
+              data for their customers. Service accounts for MSSQL databases
+              and RabbitMQ queues had historically been managed manually, with
+              passwords rarely or never rotated.
             </p>
             <p className="mb-4">
-              Varje credential som inte roteras är en säkerhetsrisk. Med
-              regulatoriska krav på hantering av känslig personaldata var
-              situationen inte acceptabel.
+              Every credential that is not rotated is a security risk. With
+              regulatory requirements for handling sensitive employee data, the
+              situation was not acceptable.
             </p>
             <p>
-              Kunden behövde en automatiserad lösning som roterar credentials
-              via AWS Secrets Manager, utan driftstörningar för
-              slutanvändarna, och en miljöstrategi som möjliggör trygg
-              testning innan produktionsdeploy.
+              The client needed an automated solution that rotates credentials
+              through AWS Secrets Manager without operational disruption for
+              end users, plus an environment strategy that enables safe testing
+              before production deployment.
             </p>
           </>
         }
@@ -74,34 +74,34 @@ export default function NordicHrGroupCaseStudyPage() {
           <ul className="list-disc pl-5 space-y-3">
             <li>
               <strong className="text-[#EDEDED]">
-                Lambda-funktion (.NET 8 Native AOT):
+                Lambda function (.NET 8 Native AOT):
               </strong>{" "}
-              Tog en färdigutvecklad Lambda-funktion från utvecklingsmiljö
-              till produktionsklar driftsättning. Native AOT för minimal
-              kallstarttid.
+              Took a completed Lambda function from the development
+              environment to production-ready deployment. Native AOT kept cold
+              starts minimal.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                CI/CD i GitHub Actions:
+                CI/CD in GitHub Actions:
               </strong>{" "}
-              Design och implementation av pipelines för bygge, testning och
-              uppladdning av Lambda-artefakter till S3. Branch protection
-              och kodgranskningsflöden.
+              Designed and implemented pipelines for build, test, and upload
+              of Lambda artifacts to S3. Added branch protection and code
+              review flows.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
                 CloudFormation + IAM least privilege:
               </strong>{" "}
-              Infrastruktur som kod med minimala behörigheter. Varje
-              komponent har exakt de rättigheter den behöver, inget mer.
+              Infrastructure as code with minimal permissions. Each component
+              has exactly the rights it needs, nothing more.
             </li>
             <li>
               <strong className="text-[#EDEDED]">
-                3-miljöstrategi:
+                Three-environment strategy:
               </strong>{" "}
-              Separata AWS-konton för test, staging och produktion med
-              miljöspecifika parametrar. Förändringar valideras i varje steg
-              innan de når produktion.
+              Separate AWS accounts for test, staging, and production with
+              environment-specific parameters. Changes are validated at each
+              step before they reach production.
             </li>
           </ul>
         }
@@ -109,14 +109,14 @@ export default function NordicHrGroupCaseStudyPage() {
         outcomeNarrative={
           <>
             <p className="mb-4">
-              Credentials roteras nu automatiskt var 30:e dag utan
-              driftstörningar. Deploy-processen gick från manuell till
-              helautomatiserad med CI/CD.
+              Credentials are now rotated automatically every 30 days without
+              operational disruption. The deployment process moved from manual
+              to fully automated with CI/CD.
             </p>
             <p>
-              Säkerhetsrisken minskade från hög till minimal.
-              Plattformsteamet har en dokumenterad driftsättningsordning och
-              kan hantera framtida förändringar med förtroende.
+              The security risk dropped from high to minimal. The platform
+              team has a documented deployment sequence and can handle future
+              changes with confidence.
             </p>
           </>
         }

@@ -31,7 +31,7 @@ export function NordicFashionChainDiagram() {
   // Service definitions
   const services = [
     { name: "Order", subtitle: ".NET Service" },
-    { name: "Lager", subtitle: ".NET Service" },
+    { name: "Inventory", subtitle: ".NET Service" },
     { name: "WMS", subtitle: ".NET Service" },
   ];
 
@@ -39,7 +39,7 @@ export function NordicFashionChainDiagram() {
     <div className="w-full">
       <svg
         role="img"
-        aria-label="Arkitekturdiagram: Eventdriven mikroservicearkitektur med Order, Lager och WMS-tjänster kopplade via Service Bus, Event Grid och Kafka, med Cosmos DB per tjänst, Azure/Kubernetes infrastruktur och Grafana-observabilitet. Ersätter tidigare Oracle-monolit."
+        aria-label="Architecture diagram: Event-driven microservice architecture with Order, Inventory, and WMS services connected through Service Bus, Event Grid, and Kafka, with Cosmos DB per service, Azure/Kubernetes infrastructure, and Grafana observability. Replaces the previous Oracle monolith."
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
@@ -296,7 +296,7 @@ export function NordicFashionChainDiagram() {
             fill="#919191"
             fontSize="8"
           >
-            Monolit (legacy)
+            Monolith (legacy)
           </text>
           {/* Strike-through X lines */}
           <line

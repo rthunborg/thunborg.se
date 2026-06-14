@@ -21,8 +21,8 @@ export function NordicShippingDiagram() {
   const svgH = infraRow2Y + infraBoxH + 24;
 
   // Role labels
-  const topRoles = ["HR-admin", "Rekryterare", "Catering\u00ADpartner", "Bemannings\u00ADpartner"];
-  const bottomRoles = ["Lönekontor", "Logistik\u00ADpartner", "Besättning"];
+  const topRoles = ["HR admin", "Recruiter", "Catering\u00ADpartner", "Staffing\u00ADpartner"];
+  const bottomRoles = ["Payroll", "Logistics\u00ADpartner", "Crew"];
 
   // Center bottom row
   const bottomRowTotalW = bottomRowCount * roleBoxW + (bottomRowCount - 1) * roleGap;
@@ -36,7 +36,7 @@ export function NordicShippingDiagram() {
     <div className="w-full">
       <svg
         role="img"
-        aria-label="Arkitekturdiagram: Rollbaserad realtidsplattform med Row Level Security för sju externa parter"
+        aria-label="Architecture diagram: Role-based real-time platform with Row Level Security for seven external parties"
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export function NordicShippingDiagram() {
           fontSize="9"
           letterSpacing="0.08em"
         >
-          ROLLBASERADE VYER
+          ROLE-BASED VIEWS
         </text>
 
         {/* Top row — 4 roles */}
@@ -227,7 +227,7 @@ export function NordicShippingDiagram() {
           fontSize="9"
           letterSpacing="0.08em"
         >
-          DATA & INFRASTRUKTUR
+          DATA & INFRASTRUCTURE
         </text>
 
         {/* Main database box */}
@@ -293,7 +293,7 @@ export function NordicShippingDiagram() {
           fill="#919191"
           fontSize="9"
         >
-          JSONB custom_data · Relationsschema · Ändringslogg
+          JSONB custom_data · Relational schema · Change log
         </text>
 
         {/* Infra row 2 — three utility boxes */}

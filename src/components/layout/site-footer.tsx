@@ -7,7 +7,7 @@ import { mainNavigation, site } from "@/lib/site-config";
 
 const contactLinks = [
   { label: "LinkedIn", href: site.linkedin },
-  { label: "Ladda ner CV", href: site.cvPath },
+  { label: "Download CV", href: site.cvPath },
 ] as const;
 
 const linkClasses =
@@ -38,9 +38,9 @@ export function SiteFooter() {
   const { openContactModal } = useContactModal();
 
   return (
-    <footer aria-label="Sidfot" className="py-16 lg:py-24">
+    <footer aria-label="Footer" className="py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
-        <nav aria-label="Sidfotnavigation">
+        <nav aria-label="Footer navigation">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-6">
             <div className="text-center md:text-left">
               <p className={headingClasses}>{site.name}</p>
@@ -48,20 +48,20 @@ export function SiteFooter() {
                 Expert Software Engineer.
               </p>
               <p className="text-muted-foreground text-sm">
-                Backend, molnarkitektur och Agentic AI.
+                Backend, cloud architecture, and Agentic AI.
               </p>
               <p className="text-muted-foreground text-sm">
-                Göteborg, Sverige.
+                Gothenburg, Sweden.
               </p>
             </div>
 
             <div className="text-center md:text-left">
-              <p className={headingClasses}>Profil</p>
+              <p className={headingClasses}>Profile</p>
               <FooterLinkList links={mainNavigation} />
             </div>
 
             <div className="text-center md:text-left">
-              <p className={headingClasses}>Kontakt</p>
+              <p className={headingClasses}>Contact</p>
               <FooterLinkList links={contactLinks} />
             </div>
           </div>
@@ -72,7 +72,7 @@ export function SiteFooter() {
             <Link
               href="/"
               className="opacity-50 hover:opacity-100 transition-opacity duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm flex-shrink-0"
-              aria-label="Tillbaka till startsidan"
+              aria-label="Back to homepage"
             >
               <Image
                 src="/images/rt-mark.svg"
@@ -91,7 +91,7 @@ export function SiteFooter() {
               <button
                 type="button"
                 onClick={() => openContactModal()}
-                aria-label="Öppna kontaktformulär"
+                aria-label="Open contact form"
                 className="font-mono hover:underline cursor-pointer bg-transparent border-none p-0 text-inherit"
               >
                 {site.email}

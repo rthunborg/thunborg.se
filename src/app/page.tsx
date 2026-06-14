@@ -11,18 +11,18 @@ export const metadata = createPageMetadata({
 
 const teasers = [
   {
-    heading: "Så arbetar jag",
-    hook: "Min struktur för att gå från oklar teknisk situation till stabil leverans.",
+    heading: "How I work",
+    hook: "My structure for moving from an unclear technical situation to stable delivery.",
     href: "/methodology",
   },
   {
-    heading: "Bidrag",
-    hook: "Arkitektur, backend, moln, teknisk ledning och Agentic AI.",
+    heading: "Services",
+    hook: "Architecture, backend, cloud, technical leadership, and Agentic AI.",
     href: "/services",
   },
   {
-    heading: "Erfarenhet",
-    hook: "Utvalda uppdrag med konkret teknisk påverkan.",
+    heading: "Experience",
+    hook: "Selected assignments with concrete technical impact.",
     href: "/case-studies",
   },
 ] as const;
@@ -34,11 +34,11 @@ export default function Home() {
         <div
           className="mb-8 space-y-2 text-center text-3xl font-semibold leading-tight tracking-tight text-[#E8E8E8] sm:text-4xl sm:space-y-2.5 lg:text-5xl"
           role="group"
-          aria-label="Vem det här är"
+          aria-label="Who this is"
         >
-          <p>Jag bygger robusta system.</p>
-          <p>Jag leder tekniska vägval.</p>
-          <p>Jag arbetar praktiskt med Agentic AI.</p>
+          <p>I build robust systems.</p>
+          <p>I lead technical decisions.</p>
+          <p>I work hands-on with Agentic AI.</p>
         </div>
         <div
           className="mx-auto mb-8 flex max-w-sm items-center gap-4 px-4"
@@ -52,8 +52,9 @@ export default function Home() {
           Rasmus Thunborg
         </h1>
         <p className="mx-auto mb-10 max-w-xl text-center text-base text-[#A1A1A1]">
-          Expert Software Engineer i Göteborg med 10+ års erfarenhet av backend,
-          molnarkitektur, teknisk ledning och moderna AI-drivna utvecklarflöden.
+          Expert Software Engineer in Gothenburg with 10+ years of experience
+          in backend systems, cloud architecture, technical leadership, and
+          modern AI-driven developer workflows.
         </p>
         <ProfileNavigation />
       </div>

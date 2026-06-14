@@ -34,10 +34,10 @@ const defaultMetadata: Metadata = {
   keywords: [
     "Rasmus Thunborg",
     "Expert Software Engineer",
-    "mjukvaruarkitekt Göteborg",
-    "backend-utvecklare",
+    "software architect Gothenburg",
+    "backend developer",
     "Agentic AI",
-    "teknisk ledning",
+    "technical leadership",
     "cloud architecture",
     "software architecture",
     "CV",
@@ -45,7 +45,7 @@ const defaultMetadata: Metadata = {
   icons: sharedIcons,
   openGraph: {
     siteName: site.name,
-    locale: "sv_SE",
+    locale: "en_US",
     type: "profile",
     images: [
       {
@@ -73,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sv" className="dark">
+    <html lang="en" className="dark">
       <head>
         <StructuredData />
       </head>

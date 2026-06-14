@@ -5,44 +5,44 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Agentic AI | Rasmus Thunborg",
   description:
-    "Rasmus Thunborgs inriktning inom Agentic AI, MCP, A2A, LLM-säkerhet och praktiska AI-drivna utvecklarflöden.",
+    "Rasmus Thunborg's focus on Agentic AI, MCP, A2A, LLM security, and practical AI-driven developer workflows.",
   keywords: [
     "Agentic AI",
     "Rasmus Thunborg",
     "Model Context Protocol",
     "MCP",
     "Google Agent2Agent",
-    "LLM-säkerhet",
-    "AI-utveckling",
+    "LLM security",
+    "AI development",
   ],
   path: "/agentic-ai",
 });
 
 const focusAreas = [
   {
-    name: "Agentbaserade utvecklarflöden",
-    text: "Jag arbetar aktivt med hur AI-agenter kan hjälpa i analys, implementation, testning, dokumentation och kodgranskning utan att ersätta tekniskt omdöme.",
+    name: "Agent-based developer workflows",
+    text: "I actively work with how AI agents can support analysis, implementation, testing, documentation, and code review without replacing technical judgment.",
   },
   {
-    name: "MCP och verktygsintegration",
-    text: "Model Context Protocol gör agentflöden praktiskt användbara när de kopplas till rätt verktyg, data och begränsningar. Jag fokuserar på integrationer som ger nytta i verkliga arbetsflöden.",
+    name: "MCP and tool integration",
+    text: "Model Context Protocol makes agent workflows practically useful when they are connected to the right tools, data, and constraints. I focus on integrations that create value in real workflows.",
   },
   {
-    name: "A2A och multi-agent-system",
-    text: "Jag följer Google Agent2Agent och mönster för samverkan mellan agenter, särskilt där ansvar, spårbarhet och handoff mellan roller behöver vara tydligt.",
+    name: "A2A and multi-agent systems",
+    text: "I follow Google Agent2Agent and patterns for collaboration between agents, especially where responsibility, traceability, and handoff between roles need to be clear.",
   },
   {
-    name: "LLM-säkerhet och kvalitet",
-    text: "AI-stöd behöver guardrails, testbarhet och tydliga gränser. Jag arbetar med OWASP-perspektiv, prompt injection-risker och praktiska kontroller för system som använder LLM:er.",
+    name: "LLM security and quality",
+    text: "AI support needs guardrails, testability, and clear boundaries. I work with OWASP perspectives, prompt injection risks, and practical controls for systems that use LLMs.",
   },
 ] as const;
 
 const practicalUses = [
-  "Snabbare kartläggning av kodbaser och beroenden",
-  "Bättre tekniska beslutsunderlag och dokumentation",
-  "Stöd för testdesign, edge cases och kvalitetssäkring",
-  "Automatiserade arbetsflöden kring utveckling och leverans",
-  "Rimliga säkerhetsgränser för AI-stödda interna verktyg",
+  "Faster mapping of codebases and dependencies",
+  "Better technical decision support and documentation",
+  "Support for test design, edge cases, and quality assurance",
+  "Automated workflows around development and delivery",
+  "Reasonable security boundaries for AI-assisted internal tools",
 ] as const;
 
 export default function AgenticAiPage() {
@@ -53,10 +53,10 @@ export default function AgenticAiPage() {
           Agentic AI
         </h1>
         <p className="max-w-2xl text-lg leading-relaxed text-[#A1A1A1]">
-          Jag ser Agentic AI som ett praktiskt verktyg för bättre
-          mjukvaruarbete: snabbare förståelse, tydligare beslutsunderlag och
-          mer konsekvent genomförande. Det fungerar bäst när det kombineras med
-          erfaren systemdesign och tydliga kvalitetsgränser.
+          I see Agentic AI as a practical tool for better software work:
+          faster understanding, clearer decision support, and more consistent
+          delivery. It works best when combined with experienced system design
+          and clear quality boundaries.
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function AgenticAiPage() {
 
       <section className="mb-16 md:mb-24">
         <p className="mb-6 font-mono text-sm uppercase tracking-widest text-[#919191]">
-          PRAKTISK ANVÄNDNING
+          PRACTICAL USE
         </p>
         <div className="rounded-lg border border-[rgba(255,255,255,0.08)] bg-[#111111] p-6 sm:p-8">
           <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -102,23 +102,24 @@ export default function AgenticAiPage() {
 
       <section>
         <p className="mb-6 font-mono text-sm uppercase tracking-widest text-[#919191]">
-          KOPPLING TILL MIN PROFIL
+          CONNECTION TO MY PROFILE
         </p>
         <div className="max-w-2xl space-y-4 text-base leading-relaxed text-[#A1A1A1]">
           <p>
-            Min bakgrund är inte AI först och mjukvaruutveckling sedan. Den är
-            tvärtom. Jag kommer från backend, integrationer, molnplattformar och
-            teknisk ledning, och använder AI där det faktiskt stärker arbetet.
+            My background is not AI first and software development second. It
+            is the other way around. I come from backend systems, integrations,
+            cloud platforms, and technical leadership, and I use AI where it
+            genuinely strengthens the work.
           </p>
           <p>
-            Det gör att jag är mest intresserad av AI som gör tekniska team mer
-            effektiva, inte av lösningar som bara ser imponerande ut i en demo.
+            That makes me most interested in AI that makes technical teams more
+            effective, not solutions that only look impressive in a demo.
           </p>
           <Link
             href="/about"
             className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-[rgba(255,255,255,0.15)] px-6 py-3 text-sm font-semibold text-[#EDEDED] outline-none ring-offset-[#0A0A0A] transition-colors duration-200 ease-out hover:border-[#F59E0B] hover:text-[#F59E0B] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 motion-reduce:transition-none"
           >
-            Läs min CV-profil
+            Read my CV profile
           </Link>
         </div>
       </section>

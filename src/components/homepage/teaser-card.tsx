@@ -17,7 +17,7 @@ export function TeaserCard({ heading, hook, href }: TeaserCardProps) {
       </h2>
       <p className="mb-4 text-sm leading-relaxed text-[#A1A1A1]">{hook}</p>
       <span className="text-sm font-medium text-[#F59E0B] transition-colors duration-200 ease-out group-hover:text-[#FBBF24] motion-reduce:transition-none">
-        Läs mer &rarr;
+        Read more &rarr;
       </span>
     </Link>
   );
