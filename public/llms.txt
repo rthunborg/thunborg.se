@@ -1,6 +1,6 @@
 # Rasmus Thunborg
 
-> Expert Software Engineer in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
+> Software Architect in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
 
 ## Overview
 
@@ -9,7 +9,7 @@ This is the personal website and CV profile for Rasmus Thunborg.
 - Website: [thunborg.se](https://thunborg.se)
 - Location: Gothenburg, Sweden
 - Languages: Swedish and English
-- LinkedIn: [linkedin.com/in/rasmusthunborg](https://www.linkedin.com/in/rasmusthunborg/)
+- LinkedIn: [linkedin.com/in/rthunborg](https://www.linkedin.com/in/rthunborg/)
 
 ## Profile
 

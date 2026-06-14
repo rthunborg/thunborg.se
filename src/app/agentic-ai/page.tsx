@@ -62,7 +62,7 @@ export default function AgenticAiPage() {
 
       <section className="mb-16 md:mb-24">
         <p className="mb-6 font-mono text-sm uppercase tracking-widest text-[#919191]">
-          FOKUS
+          FOCUS
         </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {focusAreas.map((area) => (
@@ -119,7 +119,7 @@ export default function AgenticAiPage() {
             href="/about"
             className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-[rgba(255,255,255,0.15)] px-6 py-3 text-sm font-semibold text-[#EDEDED] outline-none ring-offset-[#0A0A0A] transition-colors duration-200 ease-out hover:border-[#F59E0B] hover:text-[#F59E0B] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 motion-reduce:transition-none"
           >
-            Read my CV profile
+            Read about me
           </Link>
         </div>
       </section>

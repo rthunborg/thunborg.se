@@ -8,7 +8,7 @@ export function StructuredData() {
                 "@type": "Person",
                 "@id": `${site.url}/#person`,
                 name: site.name,
-                jobTitle: "Expert Software Engineer",
+                jobTitle: "Software Architect",
                 url: site.url,
                 image: `${site.url}/og-image.svg`,
                 email: `mailto:${site.email}`,

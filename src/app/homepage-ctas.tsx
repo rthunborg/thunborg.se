@@ -13,7 +13,7 @@ export function HomepageCTAs() {
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
       <Link href="/about" className={linkStyles}>
-        Read my CV
+        Who am I?
       </Link>
       <button
         type="button"

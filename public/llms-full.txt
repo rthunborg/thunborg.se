@@ -1,6 +1,6 @@
 # Rasmus Thunborg: Full Context
 
-> Expert Software Engineer in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
+> Software Architect in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
 
 This is the extended context file for [thunborg.se](https://thunborg.se), the personal website and CV profile for Rasmus Thunborg.
 
@@ -13,10 +13,10 @@ Rasmus has implemented scalable architectures in both AWS and Azure environments
 - Website: [thunborg.se](https://thunborg.se)
 - CV page: [About Rasmus](https://thunborg.se/about)
 - Selected work: [Selected Projects](https://thunborg.se/case-studies)
-- LinkedIn: [linkedin.com/in/rasmusthunborg](https://www.linkedin.com/in/rasmusthunborg/)
+- LinkedIn: [linkedin.com/in/rthunborg](https://www.linkedin.com/in/rthunborg/)
 - Location: Gothenburg, Sweden
 
-## Technical Expertise
+## Technical Focus
 
 ### Backend and Architecture
 
@@ -74,7 +74,7 @@ Read more: [Automated credential rotation](https://thunborg.se/case-study/nordic
 
 ### Global EV manufacturer
 
-Four-year engagement as Senior Software Engineer and Interim Technical Lead for customer financing integrations. Work included AWS Lambda/serverless, OAuth2, TLS, CORS, JWT, TypeScript/React, GraphQL, DynamoDB, Terraform, Datadog, Kibana, automated tests, mentoring, and technical direction.
+Four-year engagement as Senior Backend Consultant and Interim Technical Lead for customer financing integrations. Work included AWS Lambda/serverless, OAuth2, TLS, CORS, JWT, TypeScript/React, GraphQL, DynamoDB, Terraform, Datadog, Kibana, automated tests, mentoring, and technical direction.
 
 Read more: [Financial integrations](https://thunborg.se/case-study/global-ev-manufacturer)
 
@@ -93,8 +93,8 @@ Read more: [3D modeling backend architecture](https://thunborg.se/case-study/glo
 ## Assignment History
 
 - Visma Enterprise: Platform Engineer, 2026
-- Lindex: Senior Software Engineer, 2023-2025
-- Polestar Performance: Senior Software Engineer and Interim Technical Lead, 2021-2025
+- Lindex: Senior Backend Consultant, 2023-2025
+- Polestar Performance: Senior Backend Consultant and Interim Technical Lead, 2021-2025
 - IKEA: Senior Solution Architect, 2021
 - Ericsson: Backend Developer, 2020
 - Volvo UK / Volvo SE: Backend Developer, 2019-2020

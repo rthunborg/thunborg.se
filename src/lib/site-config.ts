@@ -5,10 +5,10 @@ export const site = {
   url: "https://thunborg.se",
   email: "rasmus@thunborg.se",
   location: "Gothenburg, Sweden",
-  linkedin: "https://www.linkedin.com/in/rasmusthunborg/",
+  linkedin: "https://www.linkedin.com/in/rthunborg/",
   cvPath: "/cv/rasmus-thunborg-cv.pdf",
   description:
-    "Expert Software Engineer in Gothenburg with 10+ years of experience in backend systems, cloud architecture, technical leadership, and Agentic AI.",
+    "Software Architect in Gothenburg with 10+ years of experience in backend systems, cloud architecture, technical leadership, and Agentic AI.",
 } as const;
 
 export const mainNavigation = [

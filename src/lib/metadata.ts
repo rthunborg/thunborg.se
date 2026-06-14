@@ -5,7 +5,7 @@ const openGraphImage = {
   url: "/og-image.svg",
   width: 1200,
   height: 630,
-  alt: "Rasmus Thunborg: Expert Software Engineer",
+  alt: "Rasmus Thunborg: Software Architect",
 };
 
 interface PageMetadataOptions {
@@ -32,7 +32,7 @@ export function createPageMetadata({
       description,
       url,
       siteName: site.name,
-      locale: "sv_SE",
+      locale: "en_US",
       type: "profile",
       images: [openGraphImage],
     },

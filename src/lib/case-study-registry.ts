@@ -45,7 +45,7 @@ export const caseStudyRegistry: CaseStudyCardMeta[] = [
     slug: "nordic-fashion-chain",
     title: "From Legacy to Event-Driven Architecture",
     context: "Leading Nordic Fashion Chain",
-    role: "Senior Software Engineering",
+    role: "Backend Architecture",
     metrics: [
       { label: "Deploy frequency", value: "1/month → 3/week" },
       { label: "Incidents", value: "↓ 88%" },

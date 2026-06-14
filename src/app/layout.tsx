@@ -29,11 +29,11 @@ const sharedIcons: Metadata["icons"] = {
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Rasmus Thunborg | Expert Software Engineer",
+  title: "Rasmus Thunborg | Software Architect",
   description: site.description,
   keywords: [
     "Rasmus Thunborg",
-    "Expert Software Engineer",
+    "Software Architect",
     "software architect Gothenburg",
     "backend developer",
     "Agentic AI",
@@ -52,7 +52,7 @@ const defaultMetadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Rasmus Thunborg: Expert Software Engineer",
+        alt: "Rasmus Thunborg: Software Architect",
       },
     ],
   },

@@ -4,9 +4,9 @@ import { ChevronRight } from "lucide-react";
 const PROFILE_OPTIONS = [
   {
     id: "about",
-    label: "Read my CV profile, background, and technical breadth.",
+    label: "Read about who I am, my background, and technical breadth.",
     href: "/about",
-    ariaLabel: "Read my CV profile, background, and technical breadth.",
+    ariaLabel: "Read about who I am, my background, and technical breadth.",
   },
   {
     id: "case-studies",

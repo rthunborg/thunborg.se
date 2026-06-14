@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PageShell } from "@/components/page-shell";
 import { ContactButton } from "./contact-button";
 import { site } from "@/lib/site-config";
@@ -7,11 +8,11 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "About Rasmus Thunborg | CV and experience",
   description:
-    "CV profile for Rasmus Thunborg: Expert Software Engineer in Gothenburg with experience in backend systems, cloud architecture, technical leadership, integrations, and Agentic AI.",
+    "CV profile for Rasmus Thunborg: Software Architect in Gothenburg with experience in backend systems, cloud architecture, technical leadership, integrations, and Agentic AI.",
   keywords: [
     "Rasmus Thunborg",
     "CV",
-    "Expert Software Engineer",
+    "Software Architect",
     "software architect Gothenburg",
     "backend developer",
     "Agentic AI",
@@ -31,14 +32,14 @@ const assignments = [
     name: "Lindex",
     years: "2023–2025",
     duration: "2.5 years",
-    role: "Senior Software Engineer",
+    role: "Senior Backend Consultant",
     focus: ".NET microservices, Azure/Kubernetes, event sourcing, and retail flows.",
   },
   {
     name: "Polestar",
     years: "2021–2025",
     duration: "4 years",
-    role: "Senior Software Engineer / Interim Technical Lead",
+    role: "Senior Backend Consultant / Interim Technical Lead",
     focus: "Financial integrations, AWS serverless, technical leadership, and mentoring.",
   },
   {
@@ -105,16 +106,43 @@ const languages = [
 export default function AboutPage() {
   return (
     <PageShell breadcrumbSegments={[{ label: "about" }]}>
-      <div className="mb-12 md:mb-16">
-        <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
-          Rasmus Thunborg
-        </h1>
-        <p className="max-w-2xl text-lg leading-relaxed text-[#A1A1A1]">
-          Expert Software Engineer in Gothenburg. I combine classic backend and
-          systems architecture with Agentic AI, hands-on technical leadership,
-          and a strong ability to translate technical analysis into business
-          value.
-        </p>
+      <div className="mb-12 grid gap-8 md:mb-16 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div>
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
+            Rasmus Thunborg
+          </h1>
+          <p className="max-w-2xl text-lg leading-relaxed text-[#A1A1A1]">
+            Software Architect in Gothenburg. I combine classic backend and
+            systems architecture with Agentic AI, hands-on technical leadership,
+            and a practical eye for turning technical analysis into business
+            value.
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={site.cvPath}
+              download
+              className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-[#F59E0B] px-6 py-3 text-sm font-semibold text-[#0A0A0A] outline-none ring-offset-[#0A0A0A] transition-colors duration-200 ease-out hover:bg-[#D97706] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 motion-reduce:transition-none"
+            >
+              Download CV (PDF)
+            </a>
+            <Link
+              href="/case-studies"
+              className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-[rgba(255,255,255,0.15)] px-6 py-3 text-sm font-semibold text-[#EDEDED] outline-none ring-offset-[#0A0A0A] transition-colors duration-200 ease-out hover:border-[#F59E0B] hover:text-[#F59E0B] focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 motion-reduce:transition-none"
+            >
+              View projects
+            </Link>
+          </div>
+        </div>
+        <div className="relative mx-auto w-full max-w-[280px] overflow-hidden rounded-lg border border-[rgba(255,255,255,0.1)] bg-[#111111] shadow-[0_24px_60px_rgba(0,0,0,0.28)] lg:mx-0">
+          <Image
+            src="/images/rasmus-thunborg-headshot.jpg"
+            alt="Black-and-white headshot of Rasmus Thunborg"
+            width={600}
+            height={800}
+            priority
+            className="aspect-[3/4] w-full object-cover"
+          />
+        </div>
       </div>
 
       <section className="mb-16 md:mb-24">
@@ -154,6 +182,25 @@ export default function AboutPage() {
               technical decisions that can be implemented, documentation that
               can be used, and solutions the team can continue to own after my
               involvement.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-2 text-lg font-semibold text-[#EDEDED]">
+              Outside work
+            </h2>
+            <p>
+              I was born and raised in Gothenburg, which is also where I am
+              based today. Outside work I like gaming, working out, travelling,
+              reading, and getting out into the forest when I need a proper
+              reset.
+            </p>
+            <p>
+              I am probably best described as an outgoing introvert. I like
+              people, and I love spending time with my partner, family, and
+              friends, but home is where I recharge. That also means remote
+              work has never felt like a problem. Quiet focus, decent coffee,
+              and no commute is a suspiciously effective combination.
             </p>
           </div>
         </div>

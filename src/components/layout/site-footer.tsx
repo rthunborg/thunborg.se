@@ -45,7 +45,7 @@ export function SiteFooter() {
             <div className="text-center md:text-left">
               <p className={headingClasses}>{site.name}</p>
               <p className="text-muted-foreground text-sm">
-                Expert Software Engineer.
+                Software Architect.
               </p>
               <p className="text-muted-foreground text-sm">
                 Backend, cloud architecture, and Agentic AI.
