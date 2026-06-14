@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Rasmus Thunborg mark</title>
+  <desc id="desc">Minimal RT monogram in amber on a dark background.</desc>
+  <rect width="128" height="128" rx="20" fill="#0A0A0A"/>
+  <rect x="12" y="12" width="104" height="104" rx="14" fill="#111111" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <path d="M37 88V38h23c12 0 20 7 20 18 0 8-4 14-11 17l14 15H70L58 75H49v13H37Zm12-24h10c6 0 9-3 9-8s-3-8-9-8H49v16Z" fill="#F59E0B"/>
+  <path d="M81 49V38h41v11h-14v39H95V49H81Z" fill="#EDEDED"/>
+</svg>

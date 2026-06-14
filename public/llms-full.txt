@@ -1,0 +1,125 @@
+# Rasmus Thunborg: Full Context
+
+> Expert Software Engineer in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
+
+This is the extended context file for [thunborg.se](https://thunborg.se), the personal website and CV profile for Rasmus Thunborg.
+
+## Personal Profile
+
+Rasmus Thunborg combines traditional software engineering with Agentic AI. He has 10+ years of experience, primarily in backend development with .NET and C#, and also works with TypeScript, React, Tailwind, cloud architecture, CI/CD, infrastructure as code, and technical leadership.
+
+Rasmus has implemented scalable architectures in both AWS and Azure environments. His work often sits between technical analysis and business value: understanding complex systems, identifying the real constraints, designing practical improvements, and helping teams deliver them.
+
+- Website: [thunborg.se](https://thunborg.se)
+- CV page: [About Rasmus](https://thunborg.se/about)
+- Selected work: [Selected Projects](https://thunborg.se/case-studies)
+- LinkedIn: [linkedin.com/in/rasmusthunborg](https://www.linkedin.com/in/rasmusthunborg/)
+- Location: Gothenburg, Sweden
+
+## Technical Expertise
+
+### Backend and Architecture
+
+- .NET, C#, REST APIs, GraphQL, SQL, T-SQL
+- Software architecture, solution architecture, system design
+- Domain-driven design, SOLID, microservices, event sourcing
+- Legacy modernization and migration planning
+
+### Cloud and Platform
+
+- Microsoft Azure, AWS Lambda, AWS Serverless
+- Kubernetes, Docker, Terraform, Terraform CDK, Bicep
+- Azure DevOps, GitHub Actions, Jenkins, CI/CD
+- IAM, OAuth, TLS, JWT, Active Directory, Microsoft Graph
+
+### Data and Integration
+
+- MongoDB, DynamoDB, Cosmos DB, SQL databases
+- Kafka, Azure Service Bus, Event Grid
+- Snowflake, data lake, analytics, data storytelling
+- External supplier integrations and internal platform integration
+
+### Agentic AI
+
+- Agentic AI workflows for software engineering
+- Model Context Protocol (MCP)
+- Google Agent2Agent (A2A)
+- Prompt engineering and LLM application security
+- OWASP Top 10 for LLM Apps
+
+## Work Style
+
+Rasmus works close to both code and team. His preferred pattern is:
+
+1. Understand the current system and constraints.
+2. Create a technical direction that can actually be implemented.
+3. Work practically with code, architecture, testability, delivery, and operations.
+4. Transfer knowledge so the team can keep owning the result.
+
+Read more: [How I work](https://thunborg.se/methodology)
+
+## Selected Projects
+
+### Nordic shipping / HR operations
+
+Built a full-stack real-time platform replacing Excel-based seasonal recruitment workflows. The platform serves external partners through role-based views with Row Level Security, reducing version chaos and creating GDPR-ready audit trails. Built with Next.js, Supabase PostgreSQL, and TypeScript.
+
+Read more: [Shipping HR platform](https://thunborg.se/case-study/nordic-shipping)
+
+### Nordic HR group
+
+Platform engineering work for automated credential rotation. Took a .NET 8 Native AOT Lambda function from development to production, implemented GitHub Actions CI/CD, CloudFormation, IAM least privilege, and a multi-environment AWS strategy.
+
+Read more: [Automated credential rotation](https://thunborg.se/case-study/nordic-hr-group)
+
+### Global EV manufacturer
+
+Four-year engagement as Senior Software Engineer and Interim Technical Lead for customer financing integrations. Work included AWS Lambda/serverless, OAuth2, TLS, CORS, JWT, TypeScript/React, GraphQL, DynamoDB, Terraform, Datadog, Kibana, automated tests, mentoring, and technical direction.
+
+Read more: [Financial integrations](https://thunborg.se/case-study/global-ev-manufacturer)
+
+### Nordic fashion chain
+
+Modernized legacy systems for order, inventory, stock, WMS, retail, and e-commerce flows. Built .NET microservices with DDD, aggregates, event sourcing, Azure/Kubernetes, Terraform, Cosmos DB, Service Bus, Event Grid, Kafka, Azure DevOps, Jira, and Grafana.
+
+Read more: [Legacy to event-driven architecture](https://thunborg.se/case-study/nordic-fashion-chain)
+
+### Global furniture group
+
+Designed and implemented backend architecture for an internal 3D modeling application. Work included .NET setup, Azure DevOps CI/CD, Azure resources, IAM with Active Directory, Microsoft Graph integration, MongoDB data modeling, REST APIs, and reverse engineering of a Python legacy backend.
+
+Read more: [3D modeling backend architecture](https://thunborg.se/case-study/global-furniture-group)
+
+## Assignment History
+
+- Visma Enterprise: Platform Engineer, 2026
+- Lindex: Senior Software Engineer, 2023-2025
+- Polestar Performance: Senior Software Engineer and Interim Technical Lead, 2021-2025
+- IKEA: Senior Solution Architect, 2021
+- Ericsson: Backend Developer, 2020
+- Volvo UK / Volvo SE: Backend Developer, 2019-2020
+- Trafikverket, Danfoss Heatpumps, Svensk Elitfotboll, Familjebostäder: Applications Developer, 2016-2018
+
+## Certifications and Courses
+
+- SnowPro Core Certification
+- Microsoft Certified: Azure Fundamentals
+- GenAI Cybersecurity Solutions: OWASP Top 10 for LLM Apps
+- Intro to Google's A2A Protocol: Interoperable AI Agents
+- Introducing MLOps: From Model Development to Deployment
+- The Product Management for AI and Data Science
+- The Complete Artificial Intelligence and ChatGPT Course
+- How to Tell a Story with Data
+- Ledarskap 1
+
+## Languages
+
+- Swedish: native
+- English: native
+- Norwegian: fluent
+- Danish: intermediate
+- Spanish: basic
+
+## Contact
+
+Use the contact form on [thunborg.se](https://thunborg.se) or email [rasmus@thunborg.se](mailto:rasmus@thunborg.se).

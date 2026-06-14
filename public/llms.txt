@@ -1,0 +1,39 @@
+# Rasmus Thunborg
+
+> Expert Software Engineer in Gothenburg, Sweden, focused on backend systems, cloud architecture, technical leadership, integrations, legacy modernization, and Agentic AI.
+
+## Overview
+
+This is the personal website and CV profile for Rasmus Thunborg.
+
+- Website: [thunborg.se](https://thunborg.se)
+- Location: Gothenburg, Sweden
+- Languages: Swedish and English
+- LinkedIn: [linkedin.com/in/rasmusthunborg](https://www.linkedin.com/in/rasmusthunborg/)
+
+## Profile
+
+Rasmus combines traditional software engineering with Agentic AI. His background is strongest in backend development with .NET and C#, but includes TypeScript, React, Tailwind, cloud architecture, CI/CD, infrastructure as code, technical analysis, and team leadership.
+
+## Main Areas
+
+- Software architecture and system design
+- Backend development with .NET, C#, APIs, and integrations
+- Azure, AWS, Kubernetes, Docker, Terraform, and CI/CD
+- Microservices, event sourcing, domain-driven design, and legacy modernization
+- Technical leadership, mentoring, and architecture decision-making
+- Agentic AI, MCP, A2A, prompt engineering, and LLM application security
+
+## Selected Work
+
+- **Nordic shipping / HR operations:** Real-time platform replacing Excel-based seasonal recruitment workflows.
+- **Nordic HR group:** Automated credential rotation pipeline using AWS Lambda and GitHub Actions.
+- **Global EV manufacturer:** Technical leadership for financial integrations on AWS serverless.
+- **Nordic fashion chain:** Legacy-to-event-driven architecture modernization with .NET, Azure, Kubernetes, and event sourcing.
+- **Global furniture group:** .NET backend architecture for internal 3D modeling, IAM, CI/CD, and legacy migration.
+
+All selected work: [Selected Projects](https://thunborg.se/case-studies)
+
+## Contact
+
+Use the contact form on the website or email [rasmus@thunborg.se](mailto:rasmus@thunborg.se).
