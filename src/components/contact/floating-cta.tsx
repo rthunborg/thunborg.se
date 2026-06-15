@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { MessageCircle } from "lucide-react";
 import { useContactModal } from "@/components/contact";
 
 const ACCENT_RGB = { r: 245, g: 158, b: 11 }; // #F59E0B
@@ -67,22 +68,22 @@ function FloatingCtaVisible({ onContact }: FloatingCtaVisibleProps) {
       ref={buttonRef}
       type="button"
       onClick={() => onContact()}
-      aria-label="Contact"
-      className={`fixed bottom-6 left-1/2 z-40 rounded-full px-6 py-3 text-sm font-semibold shadow-lg min-h-12 min-w-12 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] motion-reduce:transition-none ${
+      aria-label="Contact Rasmus"
+      className={`fixed bottom-[calc(0.75rem+env(safe-area-inset-bottom))] right-3 z-40 flex h-11 w-11 items-center justify-center rounded-full border text-sm font-semibold shadow-lg md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] motion-reduce:transition-none ${
         inverted ? "shadow-black/20" : "shadow-amber-500/20"
       }`}
-      initial={{ opacity: 0, y: 20, x: "-50%" }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{
         opacity: 1,
         y: 0,
-        x: "-50%",
         backgroundColor: inverted ? "#0A0A0A" : "#F59E0B",
+        borderColor: inverted ? "rgba(245,158,11,0.35)" : "transparent",
         color: inverted ? "#F59E0B" : "#0A0A0A",
       }}
-      exit={{ opacity: 0, y: 20, x: "-50%" }}
+      exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
-      Discuss an idea?
+      <MessageCircle className="h-5 w-5" aria-hidden="true" />
     </motion.button>
   );
 }
