@@ -1,10 +1,12 @@
 import type { CaseStudyLayoutProps } from "./types";
 import { MetricCard } from "./metric-card";
 import { PageShell } from "@/components/page-shell";
+import { CaseStudyArticleJsonLd } from "@/components/seo/page-jsonld";
 
 export function CaseStudyLayout({
   slug,
   title,
+  description,
   industry,
   timeline,
   problemNarrative,
@@ -15,7 +17,15 @@ export function CaseStudyLayout({
 }: CaseStudyLayoutProps) {
   return (
     <PageShell breadcrumbSegments={[{ label: "case-studies", href: "/case-studies" }, { label: slug }]}>
-    <article>
+      <CaseStudyArticleJsonLd
+        slug={slug}
+        title={title}
+        description={description}
+        industry={industry}
+        timeline={timeline}
+        metrics={metrics}
+      />
+      <article>
       {/* Header */}
       <header className="max-w-4xl mx-auto pb-12">
         <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -75,7 +85,7 @@ export function CaseStudyLayout({
           {outcomeNarrative}
         </div>
       </section>
-    </article>
+      </article>
     </PageShell>
   );
 }

@@ -13,6 +13,7 @@ interface PageMetadataOptions {
   description: string;
   path?: string;
   keywords?: string[];
+  openGraphType?: "website" | "profile" | "article";
 }
 
 export function createPageMetadata({
@@ -20,6 +21,7 @@ export function createPageMetadata({
   description,
   path = "",
   keywords,
+  openGraphType = "website",
 }: PageMetadataOptions): Metadata {
   const url = path ? `${site.url}${path}` : site.url;
 
@@ -27,13 +29,16 @@ export function createPageMetadata({
     title,
     description,
     keywords,
+    authors: [{ name: site.name, url: site.url }],
+    creator: site.name,
+    publisher: site.name,
     openGraph: {
       title,
       description,
       url,
       siteName: site.name,
       locale: "en_US",
-      type: "profile",
+      type: openGraphType,
       images: [openGraphImage],
     },
     twitter: {

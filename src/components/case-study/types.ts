@@ -9,6 +9,7 @@ export interface CaseStudyMetric {
 export interface CaseStudyLayoutProps {
   slug: string;
   title: string;
+  description: string;
   industry: string;
   timeline: string;
   problemNarrative: React.ReactNode;

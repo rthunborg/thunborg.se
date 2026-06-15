@@ -9,7 +9,11 @@ export const metadata = createPageMetadata({
   description:
     "Selected project: complete .NET backend architecture for internal 3D modeling, IAM, CI/CD, and legacy migration.",
   path: "/case-study/global-furniture-group",
+  openGraphType: "article",
 });
+
+const description =
+  "Complete .NET backend architecture for internal 3D modeling, IAM, CI/CD, and legacy migration.";
 
 const metrics: CaseStudyMetric[] = [
   {
@@ -47,6 +51,7 @@ export default function GlobalFurnitureGroupCaseStudyPage() {
       <CaseStudyLayout
         slug="global-furniture-group"
         title="Backend Architecture for 3D Modeling"
+        description={description}
         industry="Retail / Enterprise"
         timeline="6 months (2021)"
         problemNarrative={

@@ -3,11 +3,12 @@ import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Agentic AI | Rasmus Thunborg",
+  title: "Agentic AI consulting for software teams | Rasmus Thunborg",
   description:
-    "Rasmus Thunborg's focus on Agentic AI, MCP, A2A, LLM security, and practical AI-driven developer workflows.",
+    "Practical Agentic AI consulting for software teams: MCP, A2A, LLM security, and AI-driven developer workflows with engineering quality controls.",
   keywords: [
     "Agentic AI",
+    "Agentic AI consulting",
     "Rasmus Thunborg",
     "Model Context Protocol",
     "MCP",

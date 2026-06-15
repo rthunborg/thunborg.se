@@ -9,7 +9,11 @@ export const metadata = createPageMetadata({
   description:
     "Selected project: a real-time platform with role-based access, change logging, and a GDPR-ready foundation, delivered in four months by one person.",
   path: "/case-study/nordic-shipping",
+  openGraphType: "article",
 });
+
+const description =
+  "A real-time platform with role-based access, change logging, and a GDPR-ready foundation, delivered in four months by one person.";
 
 const metrics: CaseStudyMetric[] = [
   {
@@ -47,6 +51,7 @@ export default function NordicShippingCaseStudyPage() {
     <CaseStudyLayout
       slug="nordic-shipping"
       title="From Excel Chaos to a Real-Time Seasonal Recruitment Platform"
+      description={description}
       industry="Maritime / HR"
       timeline="4 months (Oct 2025 – Feb 2026)"
       problemNarrative={

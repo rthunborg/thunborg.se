@@ -8,7 +8,11 @@ export const metadata = createPageMetadata({
   description:
     "Selected project: modernization of legacy systems for order, inventory, and WMS with .NET microservices, event sourcing, and Azure/Kubernetes.",
   path: "/case-study/nordic-fashion-chain",
+  openGraphType: "article",
 });
+
+const description =
+  "Modernization of legacy systems for order, inventory, and WMS with .NET microservices, event sourcing, and Azure/Kubernetes.";
 
 const metrics: CaseStudyMetric[] = [
   {
@@ -46,6 +50,7 @@ export default function NordicFashionChainCaseStudyPage() {
       <CaseStudyLayout
         slug="nordic-fashion-chain"
         title="From Legacy to Event-Driven Architecture"
+        description={description}
         industry="Fashion / E-commerce"
         timeline="2.5 years (on demand, 8–24h/week)"
         problemNarrative={

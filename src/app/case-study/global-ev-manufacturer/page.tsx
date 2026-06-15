@@ -8,7 +8,11 @@ export const metadata = createPageMetadata({
   description:
     "Selected project: technical leadership, AWS serverless, and financial integrations for a global EV manufacturer.",
   path: "/case-study/global-ev-manufacturer",
+  openGraphType: "article",
 });
+
+const description =
+  "Technical leadership, AWS serverless, and financial integrations for a global EV manufacturer.";
 
 const metrics: CaseStudyMetric[] = [
   {
@@ -46,6 +50,7 @@ export default function GlobalEvManufacturerCaseStudyPage() {
       <CaseStudyLayout
         slug="global-ev-manufacturer"
         title="Technical Leadership for Financial Integrations"
+        description={description}
         industry="Automotive / FinTech"
         timeline="4 years (2021–2025)"
         problemNarrative={

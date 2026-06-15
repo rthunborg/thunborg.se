@@ -1,12 +1,15 @@
 import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
+import { ServicesJsonLd } from "@/components/seo/page-jsonld";
 
 export const metadata = createPageMetadata({
-  title: "Where I can help | Rasmus Thunborg",
+  title: "Software architecture consulting | Rasmus Thunborg",
   description:
-    "Areas where Rasmus Thunborg can help: software architecture, backend systems, cloud platforms, technical leadership, integrations, and Agentic AI.",
+    "Software architecture consulting for backend systems, cloud platforms, technical leadership, integrations, legacy modernization, and Agentic AI.",
   keywords: [
     "Rasmus Thunborg",
+    "software architecture consultant",
+    "software architect Gothenburg",
     "software architecture",
     "backend",
     "cloud architecture",
@@ -88,6 +91,7 @@ const contributionAreas = [
 export default function ServicesPage() {
   return (
     <PageShell breadcrumbSegments={[{ label: "services" }]}>
+      <ServicesJsonLd services={contributionAreas} />
       <div className="mb-12 md:mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
           Where I can help

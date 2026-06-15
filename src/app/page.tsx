@@ -5,8 +5,9 @@ import { site } from "@/lib/site-config";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Rasmus Thunborg | Software Architect",
+  title: "Rasmus Thunborg | Software Architect in Gothenburg",
   description: site.description,
+  openGraphType: "profile",
 });
 
 const teasers = [

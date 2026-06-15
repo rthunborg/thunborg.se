@@ -2,12 +2,13 @@ import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "How I work | Rasmus Thunborg",
+  title: "Software architecture delivery method | Rasmus Thunborg",
   description:
-    "My working method: understand the situation, create direction, deliver close to the code, and hand over so the team can own the result.",
+    "A practical software architecture delivery method: understand the situation, create direction, deliver close to code, and hand over ownership to the team.",
   keywords: [
     "Rasmus Thunborg",
     "working method",
+    "software architecture delivery",
     "software architecture",
     "technical leadership",
     "software engineering",

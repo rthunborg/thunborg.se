@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
 import { createPageMetadata } from "@/lib/metadata";
+import { CaseStudiesItemListJsonLd } from "@/components/seo/page-jsonld";
 
 export const metadata = createPageMetadata({
-  title: "Selected projects | Rasmus Thunborg",
+  title: "Software architecture case studies | Rasmus Thunborg",
   description:
-    "Selected projects and assignments from Rasmus Thunborg's work with software architecture, backend systems, cloud, technical leadership, and modernization.",
+    "Selected software architecture case studies covering backend systems, cloud, technical leadership, integrations, modernization, and Agentic AI.",
   keywords: [
     "Rasmus Thunborg",
+    "software architecture case studies",
     "selected projects",
     "case studies",
     "software architecture",
@@ -77,6 +79,7 @@ const cardClasses =
 export default function CaseStudiesPage() {
   return (
     <PageShell breadcrumbSegments={[{ label: "case-studies" }]}>
+        <CaseStudiesItemListJsonLd caseStudies={caseStudies} />
         <div className="mb-12 md:mb-16">
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">
             Selected projects

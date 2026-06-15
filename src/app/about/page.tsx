@@ -4,6 +4,7 @@ import { PageShell } from "@/components/page-shell";
 import { ContactButton } from "./contact-button";
 import { site } from "@/lib/site-config";
 import { createPageMetadata } from "@/lib/metadata";
+import { ProfilePageJsonLd } from "@/components/seo/page-jsonld";
 
 export const metadata = createPageMetadata({
   title: "About Rasmus Thunborg | CV and experience",
@@ -18,6 +19,7 @@ export const metadata = createPageMetadata({
     "Agentic AI",
   ],
   path: "/about",
+  openGraphType: "profile",
 });
 
 const assignments = [
@@ -106,6 +108,7 @@ const languages = [
 export default function AboutPage() {
   return (
     <PageShell breadcrumbSegments={[{ label: "about" }]}>
+      <ProfilePageJsonLd />
       <div className="mb-12 grid gap-8 md:mb-16 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
         <div>
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-[#EDEDED] sm:text-4xl lg:text-5xl">

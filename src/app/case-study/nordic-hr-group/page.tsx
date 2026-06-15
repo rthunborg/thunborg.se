@@ -8,7 +8,11 @@ export const metadata = createPageMetadata({
   description:
     "Selected project: from manually handled credentials to automated rotation with AWS Lambda, GitHub Actions, and least privilege.",
   path: "/case-study/nordic-hr-group",
+  openGraphType: "article",
 });
+
+const description =
+  "From manually handled credentials to automated rotation with AWS Lambda, GitHub Actions, and least privilege.";
 
 const metrics: CaseStudyMetric[] = [
   {
@@ -46,6 +50,7 @@ export default function NordicHrGroupCaseStudyPage() {
       <CaseStudyLayout
         slug="nordic-hr-group"
         title="Automated Credential Rotation"
+        description={description}
         industry="HR / Enterprise SAAS"
         timeline="4 months (2026)"
         problemNarrative={
